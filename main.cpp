@@ -12,20 +12,13 @@
  */
 
 #include <cstdlib>
-#include <SDL2/SDL.h>
+#include "Rendering/RenderManager.h"
+#include "Input/InputManager.h"
 
 SDL_Window *window;
 int main(int argc, char** argv) {
-    SDL_Init(SDL_INIT_VIDEO);   // Initialize SDL2
-    window = SDL_CreateWindow( 
-        "An SDL2 window",                  //    window title
-        SDL_WINDOWPOS_UNDEFINED,           //    initial x position
-        SDL_WINDOWPOS_UNDEFINED,           //    initial y position
-        800,                               //    width, in pixels
-        600,                               //    height, in pixels
-        SDL_WINDOW_SHOWN|SDL_WINDOW_OPENGL //    flags - see below
-    );
-
+    RenderManager* renderManager = new RenderManager();
+    renderManager->startSDL();
     return 0;
 }
 
