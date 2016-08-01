@@ -80,14 +80,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1/CMakeFiles /home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1 && $(CMAKE_COMMAND) -E cmake_progress_start /home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1/CMakeFiles /home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1/Command/CMakeFiles/progress.marks
+	cd /home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1 && $(MAKE) -f CMakeFiles/Makefile2 Command/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1 && $(MAKE) -f CMakeFiles/Makefile2 Command/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,97 +97,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1 && $(MAKE) -f CMakeFiles/Makefile2 Command/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1 && $(MAKE) -f CMakeFiles/Makefile2 Command/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named OnePunchGame
+# Convenience name for target.
+Command/CMakeFiles/CommandLibrary.dir/rule:
+	cd /home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1 && $(MAKE) -f CMakeFiles/Makefile2 Command/CMakeFiles/CommandLibrary.dir/rule
+.PHONY : Command/CMakeFiles/CommandLibrary.dir/rule
 
-# Build rule for target.
-OnePunchGame: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 OnePunchGame
-.PHONY : OnePunchGame
+# Convenience name for target.
+CommandLibrary: Command/CMakeFiles/CommandLibrary.dir/rule
 
-# fast build rule for target.
-OnePunchGame/fast:
-	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/build
-.PHONY : OnePunchGame/fast
-
-#=============================================================================
-# Target rules for targets named CommandLibrary
-
-# Build rule for target.
-CommandLibrary: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 CommandLibrary
 .PHONY : CommandLibrary
 
 # fast build rule for target.
 CommandLibrary/fast:
-	$(MAKE) -f Command/CMakeFiles/CommandLibrary.dir/build.make Command/CMakeFiles/CommandLibrary.dir/build
+	cd /home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1 && $(MAKE) -f Command/CMakeFiles/CommandLibrary.dir/build.make Command/CMakeFiles/CommandLibrary.dir/build
 .PHONY : CommandLibrary/fast
 
-#=============================================================================
-# Target rules for targets named InputLibrary
+Command.o: Command.cpp.o
 
-# Build rule for target.
-InputLibrary: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 InputLibrary
-.PHONY : InputLibrary
-
-# fast build rule for target.
-InputLibrary/fast:
-	$(MAKE) -f Input/CMakeFiles/InputLibrary.dir/build.make Input/CMakeFiles/InputLibrary.dir/build
-.PHONY : InputLibrary/fast
-
-#=============================================================================
-# Target rules for targets named RenderLibrary
-
-# Build rule for target.
-RenderLibrary: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 RenderLibrary
-.PHONY : RenderLibrary
-
-# fast build rule for target.
-RenderLibrary/fast:
-	$(MAKE) -f Rendering/CMakeFiles/RenderLibrary.dir/build.make Rendering/CMakeFiles/RenderLibrary.dir/build
-.PHONY : RenderLibrary/fast
-
-main.o: main.cpp.o
-
-.PHONY : main.o
+.PHONY : Command.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/main.cpp.o
-.PHONY : main.cpp.o
+Command.cpp.o:
+	cd /home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1 && $(MAKE) -f Command/CMakeFiles/CommandLibrary.dir/build.make Command/CMakeFiles/CommandLibrary.dir/Command.cpp.o
+.PHONY : Command.cpp.o
 
-main.i: main.cpp.i
+Command.i: Command.cpp.i
 
-.PHONY : main.i
+.PHONY : Command.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/main.cpp.i
-.PHONY : main.cpp.i
+Command.cpp.i:
+	cd /home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1 && $(MAKE) -f Command/CMakeFiles/CommandLibrary.dir/build.make Command/CMakeFiles/CommandLibrary.dir/Command.cpp.i
+.PHONY : Command.cpp.i
 
-main.s: main.cpp.s
+Command.s: Command.cpp.s
 
-.PHONY : main.s
+.PHONY : Command.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/main.cpp.s
-.PHONY : main.cpp.s
+Command.cpp.s:
+	cd /home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1 && $(MAKE) -f Command/CMakeFiles/CommandLibrary.dir/build.make Command/CMakeFiles/CommandLibrary.dir/Command.cpp.s
+.PHONY : Command.cpp.s
 
 # Help Target
 help:
@@ -197,13 +160,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... OnePunchGame"
 	@echo "... CommandLibrary"
-	@echo "... InputLibrary"
-	@echo "... RenderLibrary"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... Command.o"
+	@echo "... Command.i"
+	@echo "... Command.s"
 .PHONY : help
 
 
@@ -215,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -3,7 +3,8 @@
 Command::Command(){
 
 }
-
+void Command::execute(){
+}
 Command::~Command(){
 
 }

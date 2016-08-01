@@ -13,7 +13,10 @@
 
 #ifndef ESCENA_H
 #define ESCENA_H
-
+#include "Fondo.h"
+#include "Demonio.h"
+#include "AudioManager.h"
+#include "Templario.h"
 class Escena {
 public:
     Escena();

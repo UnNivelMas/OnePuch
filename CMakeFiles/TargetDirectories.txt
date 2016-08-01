@@ -1,0 +1,4 @@
+/home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1/Rendering/CMakeFiles/RenderLibrary.dir
+/home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1/Input/CMakeFiles/InputLibrary.dir
+/home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1/CMakeFiles/OnePunchGame.dir
+/home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1/Command/CMakeFiles/CommandLibrary.dir

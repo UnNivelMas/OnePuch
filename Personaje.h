@@ -23,9 +23,9 @@ public:
     void atacar(Personaje);
     void bloquear(Personaje);
     void parry(Personaje);
-    void recibirAtaque(Personaje);
-    void recibirBloqueo(Personaje);
-    void recibirParry(Personaje);
+    void recibirAtaque(Personaje*);
+    void recibirBloqueo(Personaje*);
+    void recibirParry(Personaje*);
     void animarAtaque();
     void animarBloqueo();
     void animarMorir();

@@ -19,32 +19,32 @@ Personaje::Personaje(const Personaje& orig) {
 }
 Personaje::~Personaje() {
 }
-Personaje::atacar(Personaje _enemy){
+void Personaje::atacar(Personaje _enemy){
     this->state = 'a';
     this->animarAtaque();
     _enemy.recibirAtaque(this);
 }
-Personaje::bloquear(Personaje _enemy){
+void Personaje::bloquear(Personaje _enemy){
     this->state = 'b';
     this->animarBloqueo();
     _enemy.recibirBloqueo(this);
 }
-Personaje::parry(Personaje _enemy){
+void Personaje::parry(Personaje _enemy){
     this->state = 'p';
     this->animarParry();
     _enemy.recibirParry(this);
 }
-Personaje::recibirEvento(){
+void Personaje::recibirEvento(){
 }
-Personaje::animarAtaque(){
+void Personaje::animarAtaque(){
 }
-Personaje::animarBloqueo(){
+void Personaje::animarBloqueo(){
 }
-Personaje::animarMorir(){
+void Personaje::animarMorir(){
 }
-Personaje::animarParry(){
+void Personaje::animarParry(){
 }
-Personaje::recibirAtaque(Personaje _enemy){
+void Personaje::recibirAtaque(Personaje* _enemy){
     if(this->state == 'b'){
         this->animarBloqueo();
     }else if(this->state == 'p'){
@@ -53,7 +53,7 @@ Personaje::recibirAtaque(Personaje _enemy){
         this->animarMorir();
     }
 }
-Personaje::recibirBloqueo(Personaje _enemy){
+void Personaje::recibirBloqueo(Personaje* _enemy){
 }
-Personaje::recibirParry(Personaje _enemy){
+void Personaje::recibirParry(Personaje* _enemy){
 }

@@ -13,7 +13,7 @@
 
 #ifndef DEMONIO_H
 #define DEMONIO_H
-
+#include "Personaje.h"
 class Demonio  : public Personaje {
 public:
     Demonio();
