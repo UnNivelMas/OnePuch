@@ -13,20 +13,16 @@
 
 #ifndef ESCENA_H
 #define ESCENA_H
-#include "Fondo.h"
-#include "Demonio.h"
-#include "AudioManager.h"
-#include "Templario.h"
+#include "../Managers/Fondo.h"
+#include "../Managers/AudioManager.h"
 class Escena {
 public:
     Escena();
     Escena(const Escena& orig);
     virtual ~Escena();
 private:
-    Fondo fondo;
-    Demonio demonio;
-    Templario templario;
-    AudioManager audio;
+    Fondo _fondo;
+    AudioManager _audio;
 };
 
 #endif /* ESCENA_H */

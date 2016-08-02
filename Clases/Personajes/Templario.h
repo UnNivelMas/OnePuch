@@ -13,7 +13,7 @@
 
 #ifndef TEMPLARIO_H
 #define TEMPLARIO_H
-
+#include "Personaje.h"
 class Templario : public Personaje {
 public:
     Templario();

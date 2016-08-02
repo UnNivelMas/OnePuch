@@ -13,12 +13,6 @@
 
 #include "Escena.h"
 
-Escena::Escena() {
-}
-
-Escena::Escena(const Escena& orig) {
-}
-
-Escena::~Escena() {
-}
-
+Escena::Escena() {}
+Escena::Escena(const Escena& orig) {}
+Escena::~Escena() {}

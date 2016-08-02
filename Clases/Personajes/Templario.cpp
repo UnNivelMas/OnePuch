@@ -10,7 +10,6 @@
  * 
  * Created on 25 de julio de 2016, 08:14
  */
-#include "Personaje.h"
 #include "Templario.h"
 
 Templario::Templario() {

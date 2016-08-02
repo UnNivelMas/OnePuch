@@ -14,11 +14,11 @@
 #include <cstdlib>
 #include "Rendering/RenderManager.h"
 #include "Input/InputManager.h"
+#include "Clases/Director/Director.h"
 
-SDL_Window *window;
 int main(int argc, char** argv) {
-    RenderManager* renderManager = new RenderManager();
-    renderManager->startSDL();
+    Director* dir = new Director();
+    dir->start();
     return 0;
 }
 

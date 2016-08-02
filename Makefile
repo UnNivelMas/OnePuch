@@ -162,6 +162,276 @@ RenderLibrary/fast:
 	$(MAKE) -f Rendering/CMakeFiles/RenderLibrary.dir/build.make Rendering/CMakeFiles/RenderLibrary.dir/build
 .PHONY : RenderLibrary/fast
 
+Clases/Director/Director.o: Clases/Director/Director.cpp.o
+
+.PHONY : Clases/Director/Director.o
+
+# target to build an object file
+Clases/Director/Director.cpp.o:
+	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/Clases/Director/Director.cpp.o
+.PHONY : Clases/Director/Director.cpp.o
+
+Clases/Director/Director.i: Clases/Director/Director.cpp.i
+
+.PHONY : Clases/Director/Director.i
+
+# target to preprocess a source file
+Clases/Director/Director.cpp.i:
+	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/Clases/Director/Director.cpp.i
+.PHONY : Clases/Director/Director.cpp.i
+
+Clases/Director/Director.s: Clases/Director/Director.cpp.s
+
+.PHONY : Clases/Director/Director.s
+
+# target to generate assembly for a file
+Clases/Director/Director.cpp.s:
+	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/Clases/Director/Director.cpp.s
+.PHONY : Clases/Director/Director.cpp.s
+
+Clases/Escenas/Escena.o: Clases/Escenas/Escena.cpp.o
+
+.PHONY : Clases/Escenas/Escena.o
+
+# target to build an object file
+Clases/Escenas/Escena.cpp.o:
+	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/Clases/Escenas/Escena.cpp.o
+.PHONY : Clases/Escenas/Escena.cpp.o
+
+Clases/Escenas/Escena.i: Clases/Escenas/Escena.cpp.i
+
+.PHONY : Clases/Escenas/Escena.i
+
+# target to preprocess a source file
+Clases/Escenas/Escena.cpp.i:
+	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/Clases/Escenas/Escena.cpp.i
+.PHONY : Clases/Escenas/Escena.cpp.i
+
+Clases/Escenas/Escena.s: Clases/Escenas/Escena.cpp.s
+
+.PHONY : Clases/Escenas/Escena.s
+
+# target to generate assembly for a file
+Clases/Escenas/Escena.cpp.s:
+	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/Clases/Escenas/Escena.cpp.s
+.PHONY : Clases/Escenas/Escena.cpp.s
+
+Clases/Escenas/Gameplay.o: Clases/Escenas/Gameplay.cpp.o
+
+.PHONY : Clases/Escenas/Gameplay.o
+
+# target to build an object file
+Clases/Escenas/Gameplay.cpp.o:
+	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/Clases/Escenas/Gameplay.cpp.o
+.PHONY : Clases/Escenas/Gameplay.cpp.o
+
+Clases/Escenas/Gameplay.i: Clases/Escenas/Gameplay.cpp.i
+
+.PHONY : Clases/Escenas/Gameplay.i
+
+# target to preprocess a source file
+Clases/Escenas/Gameplay.cpp.i:
+	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/Clases/Escenas/Gameplay.cpp.i
+.PHONY : Clases/Escenas/Gameplay.cpp.i
+
+Clases/Escenas/Gameplay.s: Clases/Escenas/Gameplay.cpp.s
+
+.PHONY : Clases/Escenas/Gameplay.s
+
+# target to generate assembly for a file
+Clases/Escenas/Gameplay.cpp.s:
+	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/Clases/Escenas/Gameplay.cpp.s
+.PHONY : Clases/Escenas/Gameplay.cpp.s
+
+Clases/Managers/Animacion.o: Clases/Managers/Animacion.cpp.o
+
+.PHONY : Clases/Managers/Animacion.o
+
+# target to build an object file
+Clases/Managers/Animacion.cpp.o:
+	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/Clases/Managers/Animacion.cpp.o
+.PHONY : Clases/Managers/Animacion.cpp.o
+
+Clases/Managers/Animacion.i: Clases/Managers/Animacion.cpp.i
+
+.PHONY : Clases/Managers/Animacion.i
+
+# target to preprocess a source file
+Clases/Managers/Animacion.cpp.i:
+	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/Clases/Managers/Animacion.cpp.i
+.PHONY : Clases/Managers/Animacion.cpp.i
+
+Clases/Managers/Animacion.s: Clases/Managers/Animacion.cpp.s
+
+.PHONY : Clases/Managers/Animacion.s
+
+# target to generate assembly for a file
+Clases/Managers/Animacion.cpp.s:
+	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/Clases/Managers/Animacion.cpp.s
+.PHONY : Clases/Managers/Animacion.cpp.s
+
+Clases/Managers/AudioManager.o: Clases/Managers/AudioManager.cpp.o
+
+.PHONY : Clases/Managers/AudioManager.o
+
+# target to build an object file
+Clases/Managers/AudioManager.cpp.o:
+	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/Clases/Managers/AudioManager.cpp.o
+.PHONY : Clases/Managers/AudioManager.cpp.o
+
+Clases/Managers/AudioManager.i: Clases/Managers/AudioManager.cpp.i
+
+.PHONY : Clases/Managers/AudioManager.i
+
+# target to preprocess a source file
+Clases/Managers/AudioManager.cpp.i:
+	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/Clases/Managers/AudioManager.cpp.i
+.PHONY : Clases/Managers/AudioManager.cpp.i
+
+Clases/Managers/AudioManager.s: Clases/Managers/AudioManager.cpp.s
+
+.PHONY : Clases/Managers/AudioManager.s
+
+# target to generate assembly for a file
+Clases/Managers/AudioManager.cpp.s:
+	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/Clases/Managers/AudioManager.cpp.s
+.PHONY : Clases/Managers/AudioManager.cpp.s
+
+Clases/Managers/Fondo.o: Clases/Managers/Fondo.cpp.o
+
+.PHONY : Clases/Managers/Fondo.o
+
+# target to build an object file
+Clases/Managers/Fondo.cpp.o:
+	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/Clases/Managers/Fondo.cpp.o
+.PHONY : Clases/Managers/Fondo.cpp.o
+
+Clases/Managers/Fondo.i: Clases/Managers/Fondo.cpp.i
+
+.PHONY : Clases/Managers/Fondo.i
+
+# target to preprocess a source file
+Clases/Managers/Fondo.cpp.i:
+	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/Clases/Managers/Fondo.cpp.i
+.PHONY : Clases/Managers/Fondo.cpp.i
+
+Clases/Managers/Fondo.s: Clases/Managers/Fondo.cpp.s
+
+.PHONY : Clases/Managers/Fondo.s
+
+# target to generate assembly for a file
+Clases/Managers/Fondo.cpp.s:
+	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/Clases/Managers/Fondo.cpp.s
+.PHONY : Clases/Managers/Fondo.cpp.s
+
+Clases/Managers/Input.o: Clases/Managers/Input.cpp.o
+
+.PHONY : Clases/Managers/Input.o
+
+# target to build an object file
+Clases/Managers/Input.cpp.o:
+	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/Clases/Managers/Input.cpp.o
+.PHONY : Clases/Managers/Input.cpp.o
+
+Clases/Managers/Input.i: Clases/Managers/Input.cpp.i
+
+.PHONY : Clases/Managers/Input.i
+
+# target to preprocess a source file
+Clases/Managers/Input.cpp.i:
+	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/Clases/Managers/Input.cpp.i
+.PHONY : Clases/Managers/Input.cpp.i
+
+Clases/Managers/Input.s: Clases/Managers/Input.cpp.s
+
+.PHONY : Clases/Managers/Input.s
+
+# target to generate assembly for a file
+Clases/Managers/Input.cpp.s:
+	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/Clases/Managers/Input.cpp.s
+.PHONY : Clases/Managers/Input.cpp.s
+
+Clases/Personajes/Demonio.o: Clases/Personajes/Demonio.cpp.o
+
+.PHONY : Clases/Personajes/Demonio.o
+
+# target to build an object file
+Clases/Personajes/Demonio.cpp.o:
+	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/Clases/Personajes/Demonio.cpp.o
+.PHONY : Clases/Personajes/Demonio.cpp.o
+
+Clases/Personajes/Demonio.i: Clases/Personajes/Demonio.cpp.i
+
+.PHONY : Clases/Personajes/Demonio.i
+
+# target to preprocess a source file
+Clases/Personajes/Demonio.cpp.i:
+	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/Clases/Personajes/Demonio.cpp.i
+.PHONY : Clases/Personajes/Demonio.cpp.i
+
+Clases/Personajes/Demonio.s: Clases/Personajes/Demonio.cpp.s
+
+.PHONY : Clases/Personajes/Demonio.s
+
+# target to generate assembly for a file
+Clases/Personajes/Demonio.cpp.s:
+	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/Clases/Personajes/Demonio.cpp.s
+.PHONY : Clases/Personajes/Demonio.cpp.s
+
+Clases/Personajes/Personaje.o: Clases/Personajes/Personaje.cpp.o
+
+.PHONY : Clases/Personajes/Personaje.o
+
+# target to build an object file
+Clases/Personajes/Personaje.cpp.o:
+	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/Clases/Personajes/Personaje.cpp.o
+.PHONY : Clases/Personajes/Personaje.cpp.o
+
+Clases/Personajes/Personaje.i: Clases/Personajes/Personaje.cpp.i
+
+.PHONY : Clases/Personajes/Personaje.i
+
+# target to preprocess a source file
+Clases/Personajes/Personaje.cpp.i:
+	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/Clases/Personajes/Personaje.cpp.i
+.PHONY : Clases/Personajes/Personaje.cpp.i
+
+Clases/Personajes/Personaje.s: Clases/Personajes/Personaje.cpp.s
+
+.PHONY : Clases/Personajes/Personaje.s
+
+# target to generate assembly for a file
+Clases/Personajes/Personaje.cpp.s:
+	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/Clases/Personajes/Personaje.cpp.s
+.PHONY : Clases/Personajes/Personaje.cpp.s
+
+Clases/Personajes/Templario.o: Clases/Personajes/Templario.cpp.o
+
+.PHONY : Clases/Personajes/Templario.o
+
+# target to build an object file
+Clases/Personajes/Templario.cpp.o:
+	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/Clases/Personajes/Templario.cpp.o
+.PHONY : Clases/Personajes/Templario.cpp.o
+
+Clases/Personajes/Templario.i: Clases/Personajes/Templario.cpp.i
+
+.PHONY : Clases/Personajes/Templario.i
+
+# target to preprocess a source file
+Clases/Personajes/Templario.cpp.i:
+	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/Clases/Personajes/Templario.cpp.i
+.PHONY : Clases/Personajes/Templario.cpp.i
+
+Clases/Personajes/Templario.s: Clases/Personajes/Templario.cpp.s
+
+.PHONY : Clases/Personajes/Templario.s
+
+# target to generate assembly for a file
+Clases/Personajes/Templario.cpp.s:
+	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/Clases/Personajes/Templario.cpp.s
+.PHONY : Clases/Personajes/Templario.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -201,6 +471,36 @@ help:
 	@echo "... CommandLibrary"
 	@echo "... InputLibrary"
 	@echo "... RenderLibrary"
+	@echo "... Clases/Director/Director.o"
+	@echo "... Clases/Director/Director.i"
+	@echo "... Clases/Director/Director.s"
+	@echo "... Clases/Escenas/Escena.o"
+	@echo "... Clases/Escenas/Escena.i"
+	@echo "... Clases/Escenas/Escena.s"
+	@echo "... Clases/Escenas/Gameplay.o"
+	@echo "... Clases/Escenas/Gameplay.i"
+	@echo "... Clases/Escenas/Gameplay.s"
+	@echo "... Clases/Managers/Animacion.o"
+	@echo "... Clases/Managers/Animacion.i"
+	@echo "... Clases/Managers/Animacion.s"
+	@echo "... Clases/Managers/AudioManager.o"
+	@echo "... Clases/Managers/AudioManager.i"
+	@echo "... Clases/Managers/AudioManager.s"
+	@echo "... Clases/Managers/Fondo.o"
+	@echo "... Clases/Managers/Fondo.i"
+	@echo "... Clases/Managers/Fondo.s"
+	@echo "... Clases/Managers/Input.o"
+	@echo "... Clases/Managers/Input.i"
+	@echo "... Clases/Managers/Input.s"
+	@echo "... Clases/Personajes/Demonio.o"
+	@echo "... Clases/Personajes/Demonio.i"
+	@echo "... Clases/Personajes/Demonio.s"
+	@echo "... Clases/Personajes/Personaje.o"
+	@echo "... Clases/Personajes/Personaje.i"
+	@echo "... Clases/Personajes/Personaje.s"
+	@echo "... Clases/Personajes/Templario.o"
+	@echo "... Clases/Personajes/Templario.i"
+	@echo "... Clases/Personajes/Templario.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -14,7 +14,7 @@
 #ifndef PERSONAJE_H
 #define PERSONAJE_H
 
-#include "Animacion.h"
+#include "../Managers/Animacion.h"
 
 class Personaje {
 public:

@@ -38,6 +38,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Animacion.o \
 	${OBJECTDIR}/AudioManager.o \
 	${OBJECTDIR}/Demonio.o \
+	${OBJECTDIR}/Director.o \
 	${OBJECTDIR}/Escena.o \
 	${OBJECTDIR}/Fondo.o \
 	${OBJECTDIR}/Personaje.o \
@@ -83,6 +84,11 @@ ${OBJECTDIR}/Demonio.o: Demonio.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Demonio.o Demonio.cpp
+
+${OBJECTDIR}/Director.o: Director.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Director.o Director.cpp
 
 ${OBJECTDIR}/Escena.o: Escena.cpp 
 	${MKDIR} -p ${OBJECTDIR}

@@ -7,6 +7,7 @@
       <itemPath>Animacion.h</itemPath>
       <itemPath>AudioManager.h</itemPath>
       <itemPath>Demonio.h</itemPath>
+      <itemPath>Director.h</itemPath>
       <itemPath>Escena.h</itemPath>
       <itemPath>Fondo.h</itemPath>
       <itemPath>Personaje.h</itemPath>
@@ -22,6 +23,7 @@
       <itemPath>Animacion.cpp</itemPath>
       <itemPath>AudioManager.cpp</itemPath>
       <itemPath>Demonio.cpp</itemPath>
+      <itemPath>Director.cpp</itemPath>
       <itemPath>Escena.cpp</itemPath>
       <itemPath>Fondo.cpp</itemPath>
       <itemPath>Personaje.cpp</itemPath>
@@ -61,6 +63,10 @@
       <item path="Demonio.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Demonio.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Director.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Director.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Escena.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -112,6 +118,10 @@
       <item path="Demonio.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Demonio.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Director.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Director.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Escena.cpp" ex="false" tool="1" flavor2="0">
       </item>
