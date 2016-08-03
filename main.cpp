@@ -15,9 +15,10 @@
 #include "Rendering/RenderManager.h"
 #include "Input/InputManager.h"
 
-SDL_Window *window;
 int main(int argc, char** argv) {
     RenderManager* renderManager = new RenderManager();
+    InputManager* inputManager = new InputManager();
+    
     renderManager->startSDL();
     return 0;
 }
