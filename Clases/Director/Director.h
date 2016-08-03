@@ -35,6 +35,7 @@ class Director {
         SDL_Renderer* _renderer;
         Escena* _actual;
         Gameplay* _gameplay;
+        unsigned int _lastTime, _currentTime;
 };
 
 #endif /* DIRECTOR_H */
