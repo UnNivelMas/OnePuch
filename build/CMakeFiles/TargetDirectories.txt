@@ -1,0 +1,12 @@
+/home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1/build/CMakeFiles/edit_cache.dir
+/home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1/build/CMakeFiles/rebuild_cache.dir
+/home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1/build/CMakeFiles/OnePunchGame.dir
+/home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1/build/Command/CMakeFiles/edit_cache.dir
+/home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1/build/Command/CMakeFiles/rebuild_cache.dir
+/home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1/build/Command/CMakeFiles/CommandLibrary.dir
+/home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1/build/Input/CMakeFiles/rebuild_cache.dir
+/home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1/build/Input/CMakeFiles/edit_cache.dir
+/home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1/build/Input/CMakeFiles/InputLibrary.dir
+/home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1/build/Rendering/CMakeFiles/edit_cache.dir
+/home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1/build/Rendering/CMakeFiles/rebuild_cache.dir
+/home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1/build/Rendering/CMakeFiles/RenderLibrary.dir

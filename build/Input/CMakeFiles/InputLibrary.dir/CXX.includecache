@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1/Command/Command.h
+
+/home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1/Input/InputManager.cpp
+InputManager.h
+/home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1/Input/InputManager.h
+../Command/Command.h
+/home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1/Command/Command.h
+
+/home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1/Input/InputManager.h
+

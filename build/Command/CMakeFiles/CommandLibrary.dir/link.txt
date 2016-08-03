@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libCommandLibrary.so -o libCommandLibrary.so CMakeFiles/CommandLibrary.dir/Command.cpp.o 

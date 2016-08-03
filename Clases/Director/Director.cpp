@@ -30,7 +30,7 @@ Director::~Director() {
 }
 
 void Director::createGameplay(){
-    this->_gameplay = new Gameplay();
+    this->_gameplay = new Gameplay(this);
 }
 
 void Director::onQuit(){
@@ -43,12 +43,13 @@ void Director::start(){
     this->_quit = 0;
     this->_inputManager->start();
     this->createGameplay();
-    this->_actual = this->_gameplay;
+    this->_actual = dynamic_cast<Gameplay*>(this->_gameplay);
     SDL_Log("Director::start");
     _currentTime = SDL_GetTicks();
     while(! this->_quit){
         // _actual tiene la Scene actual y se pinta con el metodo _actual->draw();
         SDL_RenderClear(this->_renderer);
+        this->_actual->draw(this->_renderer);
         SDL_RenderPresent(this->_renderer);
         _lastTime = _currentTime;
         while(!this->_quit && _currentTime < (_lastTime+16.5)){
@@ -56,4 +57,7 @@ void Director::start(){
             _currentTime = SDL_GetTicks();
         }
     }
+}
+SDL_Renderer* Director::getRenderer(){
+    return this->_renderer;
 }

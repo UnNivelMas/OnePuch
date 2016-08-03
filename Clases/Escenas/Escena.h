@@ -16,6 +16,7 @@
 #include "../Managers/Fondo.h"
 #include "../Managers/AudioManager.h"
 class Director;
+class SDL_Renderer;
 class Escena {
 public:
     Escena();
@@ -23,10 +24,9 @@ public:
     Escena(const Escena& orig);
     virtual ~Escena();
     void setDirector(Director*);
-    void draw();
+    virtual void draw(SDL_Renderer*);
 protected:
     Director* _dir;
-    Fondo* _fondo;
     AudioManager* _audio;
 };
 

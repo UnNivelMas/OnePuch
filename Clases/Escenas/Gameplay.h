@@ -22,8 +22,12 @@ public:
     Gameplay();
     Gameplay(Director*);
     Gameplay(const Gameplay& orig);
+    void draw(SDL_Renderer*);
     virtual ~Gameplay();
 private:
+    Fondo* _medio;
+    Fondo* _fondo;
+    Fondo* _frente;
     Demonio* _demonio;
     Templario* _templario;
 };
