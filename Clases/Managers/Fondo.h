@@ -13,14 +13,22 @@
 
 #ifndef FONDO_H
 #define FONDO_H
+#include <SDL2/SDL.h>
+#include "SDL_image.h"
+
+//#include "SDL2/SDL_image.h"
 
 class Fondo {
-public:
-    Fondo();
-    Fondo(const Fondo& orig);
-    virtual ~Fondo();
-private:
-
+    public:
+        Fondo();
+        Fondo(const Fondo& orig);
+        virtual ~Fondo();
+        void loadImage(char*, SDL_Renderer*, SDL_Surface*);
+        void draw();
+    private:
+//        SDL_Texture* _imagen;
+        SDL_Surface* _imagen;
+    
 };
 
 #endif /* FONDO_H */

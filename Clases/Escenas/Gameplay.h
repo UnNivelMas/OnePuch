@@ -16,16 +16,16 @@
 #include "Escena.h"
 #include "../Personajes/Demonio.h"
 #include "../Personajes/Templario.h"
-
+class Director;
 class Gameplay : public Escena {
 public:
     Gameplay();
+    Gameplay(Director*);
     Gameplay(const Gameplay& orig);
     virtual ~Gameplay();
 private:
-    Fondo fondo;
-    Demonio demonio;
-    Templario templario;
+    Demonio* _demonio;
+    Templario* _templario;
 };
 
 #endif /* GAMEPLAY_H */

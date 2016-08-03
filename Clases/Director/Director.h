@@ -25,11 +25,14 @@ class Director {
         virtual ~Director();
         void start();
         void onQuit();
+        SDL_Renderer* getRenderer();
+        SDL_Surface* getSurfaceWindow();
     private:
         void createGameplay();
         int _quit;
         Input* _inputManager;
         SDL_Window* _window;
+        SDL_Renderer* _renderer;
         Escena* _actual;
         Gameplay* _gameplay;
 };

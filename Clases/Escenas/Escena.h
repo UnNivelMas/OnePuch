@@ -15,14 +15,19 @@
 #define ESCENA_H
 #include "../Managers/Fondo.h"
 #include "../Managers/AudioManager.h"
+class Director;
 class Escena {
 public:
     Escena();
+    Escena(Director*);
     Escena(const Escena& orig);
     virtual ~Escena();
-private:
-    Fondo _fondo;
-    AudioManager _audio;
+    void setDirector(Director*);
+    void draw();
+protected:
+    Director* _dir;
+    Fondo* _fondo;
+    AudioManager* _audio;
 };
 
 #endif /* ESCENA_H */

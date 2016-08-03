@@ -14,5 +14,11 @@
 #include "Escena.h"
 
 Escena::Escena() {}
+Escena::Escena(Director* dir){
+    this->_dir = dir;
+}
 Escena::Escena(const Escena& orig) {}
 Escena::~Escena() {}
+void Escena::setDirector(Director* dir){
+    this->_dir = dir;
+}

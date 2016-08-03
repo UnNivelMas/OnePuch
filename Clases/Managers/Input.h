@@ -12,7 +12,7 @@ class Input {
         void pause();
         int checkEvents();
     private:
-        SDL_Event* _last;
+        SDL_Event _last;
         int _pause;
         Director* _dir;
 };

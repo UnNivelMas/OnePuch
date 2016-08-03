@@ -1,4 +1,5 @@
 #include "Input.h"
+#include "../Director/Director.h"
 
 Input::Input(){
     this->_pause = false;   
@@ -20,12 +21,13 @@ int Input::checkEvents(){
         return 0;
     }
     while (SDL_PollEvent(&this->_last)) {
-        switch (event.type) {
+        switch (this->_last.type) {
             case SDL_KEYDOWN: break;
             case SDL_KEYUP: break;
             case SDL_TEXTEDITING: break;
             case SDL_TEXTINPUT: break;
-            case SDL_MOUSEBUTTONDOWN: break;
+            case SDL_MOUSEBUTTONDOWN: 
+                break;
             case SDL_QUIT:
                 this->_dir->onQuit();
                 break;

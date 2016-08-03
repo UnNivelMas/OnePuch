@@ -63,9 +63,9 @@ CMAKE_BINARY_DIR = /home/betoio/Programacion/Workspace/UnNivelMas/Templarios/Cpp
 # Target rules for target CMakeFiles/OnePunchGame.dir
 
 # All Build rule for target.
-CMakeFiles/OnePunchGame.dir/all: Rendering/CMakeFiles/RenderLibrary.dir/all
 CMakeFiles/OnePunchGame.dir/all: Command/CMakeFiles/CommandLibrary.dir/all
 CMakeFiles/OnePunchGame.dir/all: Input/CMakeFiles/InputLibrary.dir/all
+CMakeFiles/OnePunchGame.dir/all: Rendering/CMakeFiles/RenderLibrary.dir/all
 	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/depend
 	$(MAKE) -f CMakeFiles/OnePunchGame.dir/build.make CMakeFiles/OnePunchGame.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/betoio/Programacion/Workspace/UnNivelMas/Templarios/CppApplication_1/CMakeFiles --progress-num=5,6,7,8,9,10,11,12,13,14,15,16 "Built target OnePunchGame"

@@ -12,8 +12,18 @@
  */
 
 #include "Gameplay.h"
+#include "../Director/Director.h"
 
-Gameplay::Gameplay() {
+Gameplay::Gameplay() {}
+Gameplay::Gameplay(Director* dir)  :  Escena( dir) {
+    this->_fondo = new Fondo();
+    this->_fondo->loadImage("../Resources/Images/Backgrounds/Gameplay/fondo.png", 
+                            dir->getRenderer(),
+                            dir->getSurfaceWindow()
+                           );
 }
 Gameplay::Gameplay(const Gameplay& orig) {}
 Gameplay::~Gameplay() {}
+void Escena::draw(){
+    
+}

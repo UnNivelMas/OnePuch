@@ -13,12 +13,27 @@
 
 #include "Fondo.h"
 
-Fondo::Fondo() {
-}
+#include <SDL2/SDL_image.h>
 
-Fondo::Fondo(const Fondo& orig) {
-}
 
-Fondo::~Fondo() {
+Fondo::Fondo() {}
+Fondo::Fondo(const Fondo& orig) {}
+Fondo::~Fondo() {}
+void Fondo::loadImage(char file[], SDL_Renderer* renderer, SDL_Surface* gScreenSurface){
+	SDL_Surface* optimizedSurface = NULL;
+    SDL_Surface* loadedSurface = IMG_Load(file);
+    if( loadedSurface == NULL ){
+        SDL_Log( "error cargando imagen\n");
+    }else{
+        SDL_Log( "imagen cargada: \n");
+        optimizedSurface = SDL_ConvertSurface( loadedSurface, gScreenSurface->format, 0 );
+        if( optimizedSurface == NULL ){
+			SDL_Log( "Unable to optimize image %s! SDL Error: %s\n", file, SDL_GetError() );
+		}
+        this->_imagen = optimizedSurface;
+		SDL_FreeSurface( loadedSurface );
+    }
 }
-
+void Fondo::draw(){
+    
+}

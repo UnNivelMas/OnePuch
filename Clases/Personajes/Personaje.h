@@ -32,7 +32,7 @@ public:
     void animarParry();
     void recibirEvento();
     virtual ~Personaje();
-private:
+protected:
     Animacion animacionGolpear;
     Animacion animacionBloquear;
     Animacion animacionMorir;
