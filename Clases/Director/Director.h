@@ -30,8 +30,10 @@ class Director {
         int _quit;
         Input* _inputManager;
         SDL_Window* _window;
+        SDL_Renderer* _renderer;
         Escena* _actual;
         Gameplay* _gameplay;
+        unsigned int _lastTime, _currentTime;
 };
 
 #endif /* DIRECTOR_H */
