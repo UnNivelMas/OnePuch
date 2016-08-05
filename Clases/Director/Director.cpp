@@ -23,22 +23,18 @@ Director::Director() {
     SDL_LogSetPriority(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_INFO);
 }
 Director::Director(const Director& orig) {}
-
 Director::~Director() {
 	SDL_DestroyWindow(this->_window);
     SDL_Quit();
 }
-
 void Director::createGameplay(){
     this->_gameplay = new Gameplay(this);
 }
-
 void Director::onQuit(){
     this->_quit = 1;
     SDL_Log("Director::onQuit");
     SDL_Quit();
 }
-
 void Director::start(){
     this->_quit = 0;
     this->_inputManager->start();
@@ -60,4 +56,13 @@ void Director::start(){
 }
 SDL_Renderer* Director::getRenderer(){
     return this->_renderer;
+}
+void Director::onKeyDown(SDL_Event event){
+    this->_actual->onKeyDown(&event);
+}
+void Director::onKeyUp(SDL_Event event){
+    this->_actual->onKeyUp(&event);
+}
+void Director::onMouseButtonDown(SDL_Event event){
+    this->_actual->onMouseButtonDown(&event);
 }

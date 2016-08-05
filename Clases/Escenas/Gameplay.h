@@ -25,6 +25,9 @@ public:
     void draw(SDL_Renderer*);
     void update();
     virtual ~Gameplay();
+    void onKeyDown(SDL_Event*);
+    void onKeyUp(SDL_Event*);
+    void onMouseButtonDown(SDL_Event*);
 private:
     Fondo* _medio;
     Fondo* _fondo;

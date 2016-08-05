@@ -18,14 +18,17 @@
 class Director;
 class SDL_Renderer;
 class Escena {
-public:
-    Escena();
-    Escena(Director*);
-    Escena(const Escena& orig);
-    virtual ~Escena();
-    void setDirector(Director*);
-    virtual void draw(SDL_Renderer*);
-    virtual void update();
+    public:
+        Escena();
+        Escena(Director*);
+        Escena(const Escena& orig);
+        virtual ~Escena();
+        void setDirector(Director*);
+        virtual void draw(SDL_Renderer*);
+        virtual void update();
+        virtual void onKeyDown(SDL_Event*);
+        virtual void onKeyUp(SDL_Event*);
+        virtual void onMouseButtonDown(SDL_Event*);
 protected:
     Director* _dir;
     AudioManager* _audio;

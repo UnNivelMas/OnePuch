@@ -31,16 +31,19 @@ int Input::checkEvents(){
         switch (event.type) {
             case SDL_KEYDOWN: 
                 SDL_Log("SDL_KEYDOWN\n");
-                break;;
+                this->_dir->onKeyDown(event);
+                break;
             case SDL_KEYUP: 
                 SDL_Log("SDL_KEYUP\n");
-            break;;
+                this->_dir->onKeyUp(event);
+                break;
             case SDL_MOUSEBUTTONDOWN: 
-            break;;
+                this->_dir->onMouseButtonDown(event);
+                break;
             case SDL_QUIT:
                 SDL_Log("SDL_KEYUP\n");
                 this->_dir->onQuit();
-            break;;
+            break;
             default:break;
         }
     }

@@ -50,3 +50,113 @@ void Gameplay::draw(SDL_Renderer* render){
     this->_medio->draw(render);
     this->_frente->draw(render);
 }
+void Gameplay::onKeyDown(SDL_Event* event){
+//    SDL_Log("Gameplay::onKeyDown");
+    switch (event->key.keysym.sym) {
+        case SDLK_j: //Player 1 - Ataque
+            SDL_Log("Gameplay::onKeyDown -> Templario::atacar");
+            this->_templario->atacar(this->_demonio);
+            break;
+        case SDLK_k: //Player 1 - Bloqueo
+            SDL_Log("Gameplay::onKeyDown -> Templario::bloquear");
+            this->_templario->bloquear(this->_demonio);
+            break;
+        case SDLK_l: //Player 1 - Parry
+            SDL_Log("Gameplay::onKeyDown -> Templario::parry");
+            this->_templario->parry(this->_demonio);
+            break;
+        case SDLK_w: //Player 1 - Arriba
+            SDL_Log("Gameplay::onKeyDown -> Templario::arriba");
+            break;
+        case SDLK_s: //Player 1 - Abajo
+            SDL_Log("Gameplay::onKeyDown -> Templario::abajo");
+            break;
+        case SDLK_d: //Player 1 - Derecha
+            SDL_Log("Gameplay::onKeyDown -> Templario::derecha");
+            break;
+        case SDLK_a: //Player 1 - Izquierda
+            SDL_Log("Gameplay::onKeyDown -> Templario::izquierda");
+            break;
+        case SDLK_KP_4: //Player 2 - Ataque
+            SDL_Log("Gameplay::onKeyDown -> Demonio::atacar");
+            this->_demonio->atacar(this->_templario);
+            break;
+        case SDLK_KP_5: //Player 2 - Bloqueo
+            SDL_Log("Gameplay::onKeyDown -> Demonio::bloquear");
+            this->_demonio->bloquear(this->_templario);
+            break;
+        case SDLK_KP_6: //Player 2 - Parry
+            SDL_Log("Gameplay::onKeyDown -> Demonio::parry");
+            this->_demonio->parry(this->_templario);
+            break;
+        case SDLK_UP: //Player 1 - Arriba
+            SDL_Log("Gameplay::onKeyDown -> Demonio::arriba");
+            break;
+        case SDLK_DOWN: //Player 1 - Abajo
+            SDL_Log("Gameplay::onKeyDown -> Demonio::abajo");
+            break;
+        case SDLK_RIGHT: //Player 1 - Derecha
+            SDL_Log("Gameplay::onKeyDown -> Demonio::derecha");
+            break;
+        case SDLK_LEFT: //Player 1 - Izquierda
+            SDL_Log("Gameplay::onKeyDown -> Demonio::izquierda");
+            break;
+        default:break;
+    }
+}
+void Gameplay::onKeyUp(SDL_Event* event){
+//    SDL_Log("Gameplay::onKeyUp");
+    switch (event->key.keysym.sym) {
+        case SDLK_j: //Player 1 - Ataque
+            break;
+        case SDLK_k: //Player 1 - Bloqueo
+            break;
+        case SDLK_l: //Player 1 - Parry
+            break;
+        case SDLK_w: //Player 1 - Arriba
+            break;
+        case SDLK_s: //Player 1 - Abajo
+            break;
+        case SDLK_d: //Player 1 - Derecha
+            break;
+        case SDLK_a: //Player 1 - Izquierda
+            break;
+        case SDLK_KP_4: //Player 2 - Ataque
+            break;
+        case SDLK_KP_5: //Player 2 - Bloqueo
+            break;
+        case SDLK_KP_6: //Player 2 - Parry
+            break;
+        case SDLK_UP: //Player 1 - Arriba
+            break;
+        case SDLK_DOWN: //Player 1 - Abajo
+            break;
+        case SDLK_RIGHT: //Player 1 - Derecha
+            break;
+        case SDLK_LEFT: //Player 1 - Izquierda
+            break;
+        default:break;
+    }
+}
+void Gameplay::onMouseButtonDown(SDL_Event* event){
+    SDL_Log("Gameplay::onMouseButtonDown");
+//    SDL_Log(event->key);
+    /*switch (event.type) {
+        case SDL_KEYDOWN: 
+            SDL_Log("SDL_KEYDOWN\n");
+            this->_dir->onKeyDown(event);
+            break;
+        case SDL_KEYUP: 
+            SDL_Log("SDL_KEYUP\n");
+            this->_dir->onKeyUp(event);
+            break;
+        case SDL_MOUSEBUTTONDOWN: 
+            this->_dir->onMouseButtonDown(event);
+            break;
+        case SDL_QUIT:
+            SDL_Log("SDL_KEYUP\n");
+            this->_dir->onQuit();
+        break;
+        default:break;
+    }*/
+}

@@ -20,30 +20,38 @@ Personaje::Personaje(const Personaje& orig) {
 Personaje::~Personaje() {
 }
 void Personaje::draw(SDL_Renderer* renderer){}
-void Personaje::atacar(Personaje _enemy){
+void Personaje::atacar(Personaje* _enemy){
     this->state = 'a';
     this->animarAtaque();
-    _enemy.recibirAtaque(this);
+    _enemy->recibirAtaque(this);
 }
-void Personaje::bloquear(Personaje _enemy){
+void Personaje::bloquear(Personaje* _enemy){
     this->state = 'b';
     this->animarBloqueo();
-    _enemy.recibirBloqueo(this);
+    _enemy->recibirBloqueo(this);
 }
-void Personaje::parry(Personaje _enemy){
+void Personaje::parry(Personaje* _enemy){
     this->state = 'p';
     this->animarParry();
-    _enemy.recibirParry(this);
+    _enemy->recibirParry(this);
 }
 void Personaje::recibirEvento(){
 }
 void Personaje::animarAtaque(){
+    this->_anim_actual = this->_golpear;
+    this->_anim_actual->resetCounter();
 }
 void Personaje::animarBloqueo(){
+    this->_anim_actual = this->_bloquear;
+    this->_anim_actual->resetCounter();
 }
 void Personaje::animarMorir(){
+    this->_anim_actual = this->_morir;
+    this->_anim_actual->resetCounter();
 }
 void Personaje::animarParry(){
+    this->_anim_actual = this->_caminar;
+    this->_anim_actual->resetCounter();
 }
 void Personaje::recibirAtaque(Personaje* _enemy){
     if(this->state == 'b'){

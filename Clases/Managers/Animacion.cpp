@@ -20,11 +20,13 @@ Animacion::Animacion(char* path, int cant, SDL_Rect* position, SDL_Renderer* ren
     this->_actual = 0;
     this->_position = position;
     this->_texture = (SDL_Texture**)malloc(sizeof(SDL_Texture*)*cant);
-    char* index = "0123456789";
+    char str[5];
+    SDL_Log(str);
     for(i = 0; i < cant; i++){
         char result[100];
-        strcpy(result, path); // copy string one into the result.
-        strncat(result, &index[i],1);
+        strcpy(result, path);
+        sprintf(str, "%d", i);
+        strcat(result, str);
         strcat(result,".png");
         this->_texture[i] = IMG_LoadTexture(renderer, result);
         if( this->_texture[i] == NULL ){
@@ -36,9 +38,10 @@ Animacion::Animacion(char* path, int cant, SDL_Rect* position, SDL_Renderer* ren
         }
     }
 }
-Animacion::Animacion(const Animacion& orig) {
-}
-Animacion::~Animacion() {
+Animacion::Animacion(const Animacion& orig) {}
+Animacion::~Animacion() {}
+void Animacion::resetCounter() {
+    this->_actual = 0;
 }
 void Animacion::draw(SDL_Renderer* renderer){
     SDL_RenderCopy(renderer, this->_texture[this->_actual], NULL, this->_position);

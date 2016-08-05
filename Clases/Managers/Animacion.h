@@ -24,6 +24,7 @@ class Animacion {
         Animacion(const Animacion& orig);
         virtual ~Animacion();
         void draw(SDL_Renderer*);
+        void resetCounter();
     private:
         char* _path;
         int _cant;

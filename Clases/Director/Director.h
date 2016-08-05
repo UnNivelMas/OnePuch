@@ -25,6 +25,9 @@ class Director {
         virtual ~Director();
         void start();
         void onQuit();
+        void onKeyDown(SDL_Event);
+        void onKeyUp(SDL_Event);
+        void onMouseButtonDown(SDL_Event);
         SDL_Renderer* getRenderer();
         SDL_Surface* getSurfaceWindow();
     private:

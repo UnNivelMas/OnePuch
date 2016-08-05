@@ -24,3 +24,6 @@ void Escena::setDirector(Director* dir){
 }
 void Escena::draw(SDL_Renderer* renderer){}
 void Escena::update(){}
+void Escena::onKeyDown(SDL_Event* event){}
+void Escena::onKeyUp(SDL_Event* event){}
+void Escena::onMouseButtonDown(SDL_Event* event){}
