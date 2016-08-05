@@ -23,6 +23,7 @@ public:
     Gameplay(Director*);
     Gameplay(const Gameplay& orig);
     void draw(SDL_Renderer*);
+    void update();
     virtual ~Gameplay();
 private:
     Fondo* _medio;

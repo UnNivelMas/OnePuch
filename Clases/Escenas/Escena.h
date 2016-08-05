@@ -25,6 +25,7 @@ public:
     virtual ~Escena();
     void setDirector(Director*);
     virtual void draw(SDL_Renderer*);
+    virtual void update();
 protected:
     Director* _dir;
     AudioManager* _audio;

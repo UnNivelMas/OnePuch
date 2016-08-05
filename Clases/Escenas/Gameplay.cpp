@@ -17,7 +17,7 @@
 Gameplay::Gameplay() {}
 Gameplay::Gameplay(Director* dir)  :  Escena( dir) {
     SDL_Rect* pos = new SDL_Rect();
-    pos->x = 4480 / -2.5; pos->y = 0;
+    pos->x = 4480 / -1.8; pos->y = 0;
     pos->w = 4480; pos->h = 720;
     SDL_Log( "Gameplay::Gameplay(Director*)\n");
     
@@ -32,11 +32,21 @@ Gameplay::Gameplay(Director* dir)  :  Escena( dir) {
     this->_frente = new Fondo();
     this->_frente->loadImage("../Resources/Images/Backgrounds/Gameplay/frente.png", dir->getRenderer());
     this->_frente->setPosition(pos);
+    
+    this->_demonio = new Demonio(dir->getRenderer());
+    this->_templario = new Templario(dir->getRenderer());
 }
 Gameplay::Gameplay(const Gameplay& orig) {}
-Gameplay::~Gameplay() {}
+Gameplay::~Gameplay(){}
+void Gameplay::update(){
+    
+}
 void Gameplay::draw(SDL_Renderer* render){
     this->_fondo->draw(render);
+    
+    this->_demonio->draw(render);
+    this->_templario->draw(render);
+    
     this->_medio->draw(render);
     this->_frente->draw(render);
 }

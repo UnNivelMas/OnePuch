@@ -13,15 +13,23 @@
 
 #ifndef ANIMACION_H
 #define ANIMACION_H
+#include <SDL2/SDL.h>
+#include <SDL_image.h>
+#include <SDL_stdinc.h>
 
 class Animacion {
-public:
-    Animacion();
-    Animacion(const Animacion& orig);
-    virtual ~Animacion();
-private:
-
+    public:
+        Animacion();
+        Animacion(char*, int, SDL_Rect*, SDL_Renderer*);
+        Animacion(const Animacion& orig);
+        virtual ~Animacion();
+        void draw(SDL_Renderer*);
+    private:
+        char* _path;
+        int _cant;
+        int _actual;
+        SDL_Texture** _texture;
+        SDL_Rect* _position;
 };
 
 #endif /* ANIMACION_H */
-

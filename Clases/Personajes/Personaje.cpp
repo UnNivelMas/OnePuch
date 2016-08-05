@@ -19,6 +19,7 @@ Personaje::Personaje(const Personaje& orig) {
 }
 Personaje::~Personaje() {
 }
+void Personaje::draw(SDL_Renderer* renderer){}
 void Personaje::atacar(Personaje _enemy){
     this->state = 'a';
     this->animarAtaque();

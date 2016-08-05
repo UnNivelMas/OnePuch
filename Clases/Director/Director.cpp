@@ -16,7 +16,7 @@
 
 Director::Director() {
     SDL_Init(SDL_INIT_VIDEO);
-    this->_window = SDL_CreateWindow("One Punch Game", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 600, SDL_WINDOW_OPENGL);
+    this->_window = SDL_CreateWindow("One Punch Game", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280, 720, SDL_WINDOW_OPENGL);
     this->_renderer = SDL_CreateRenderer(this->_window,-1,SDL_RENDERER_ACCELERATED);
     this->_inputManager = new Input();
     this->_inputManager->setDirector(this);

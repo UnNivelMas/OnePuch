@@ -1,1 +1,0 @@
-/usr/bin/c++  -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libRenderLibrary.so -o libRenderLibrary.so CMakeFiles/RenderLibrary.dir/RenderManager.cpp.o 

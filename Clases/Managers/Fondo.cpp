@@ -18,8 +18,8 @@ Fondo::Fondo() {
     this->_position = new SDL_Rect();
     this->_position->x = 0;
     this->_position->y = 0;
-    this->_position->w = 800;
-    this->_position->h = 600;
+    this->_position->w = 1280;
+    this->_position->h = 720;
 }
 Fondo::Fondo(const Fondo& orig) {}
 Fondo::~Fondo() {}

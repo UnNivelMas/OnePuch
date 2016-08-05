@@ -16,8 +16,9 @@
 #include "Personaje.h"
 class Templario : public Personaje {
 public:
-    Templario();
+    Templario(SDL_Renderer*);
     Templario(const Templario& orig);
+    void draw(SDL_Renderer*);
     virtual ~Templario();
 private:
 

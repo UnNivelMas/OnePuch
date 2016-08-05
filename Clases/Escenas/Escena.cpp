@@ -22,4 +22,5 @@ Escena::~Escena() {}
 void Escena::setDirector(Director* dir){
     this->_dir = dir;
 }
-void Escena::draw(SDL_Renderer*){}
+void Escena::draw(SDL_Renderer* renderer){}
+void Escena::update(){}

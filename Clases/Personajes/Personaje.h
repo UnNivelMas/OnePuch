@@ -13,7 +13,7 @@
 
 #ifndef PERSONAJE_H
 #define PERSONAJE_H
-
+#include <SDL2/SDL.h>
 #include "../Managers/Animacion.h"
 
 class Personaje {
@@ -32,10 +32,16 @@ public:
     void animarParry();
     void recibirEvento();
     virtual ~Personaje();
+    virtual void draw(SDL_Renderer*);
 protected:
-    Animacion animacionGolpear;
-    Animacion animacionBloquear;
-    Animacion animacionMorir;
+    Animacion* _golpear;
+    Animacion* _caminar;
+    Animacion* _bloquear;
+    Animacion* _morir;
+    Animacion* _defensa_rota;
+    Animacion* _anim_actual;
+    Animacion* _idle;
+    SDL_Rect* _position;
     char state;/*i=idle; a=atacando; b=bloqueando; p=parryando(?)*/
 };
 
