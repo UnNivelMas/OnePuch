@@ -22,15 +22,15 @@ Gameplay::Gameplay(Director* dir)  :  Escena( dir) {
     SDL_Log( "Gameplay::Gameplay(Director*)\n");
     
     this->_fondo = new Fondo();
-    this->_fondo->loadImage("../Resources/Images/Backgrounds/Gameplay/fondo.png", dir->getRenderer());
+    this->_fondo->loadImage("Resources/Images/Backgrounds/Gameplay/fondo.png", dir->getRenderer());
     this->_fondo->setPosition(pos);
     
     this->_medio = new Fondo();
-    this->_medio->loadImage("../Resources/Images/Backgrounds/Gameplay/medio.png", dir->getRenderer());
+    this->_medio->loadImage("Resources/Images/Backgrounds/Gameplay/medio.png", dir->getRenderer());
     this->_medio->setPosition(pos);
     
     this->_frente = new Fondo();
-    this->_frente->loadImage("../Resources/Images/Backgrounds/Gameplay/frente.png", dir->getRenderer());
+    this->_frente->loadImage("Resources/Images/Backgrounds/Gameplay/frente.png", dir->getRenderer());
     this->_frente->setPosition(pos);
     
     this->_demonio = new Demonio(dir->getRenderer());

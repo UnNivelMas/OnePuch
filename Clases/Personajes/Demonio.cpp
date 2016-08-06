@@ -19,12 +19,12 @@ Demonio::Demonio(SDL_Renderer* renderer) {
     this->_position->y = 250;
     this->_position->w = 480;
     this->_position->h = 384;
-    this->_caminar = new Animacion("../Resources/Images/Animations/Demonio/Caminata/", 8, this->_position, renderer);
-    this->_bloquear = new Animacion("../Resources/Images/Animations/Demonio/Bloqueo/", 8, this->_position, renderer);
-    this->_morir = new Animacion("../Resources/Images/Animations/Demonio/Muerte/", 18, this->_position, renderer);
-    this->_golpear = new Animacion("../Resources/Images/Animations/Demonio/Golpe/", 7, this->_position, renderer);
-    this->_defensa_rota = new Animacion("../Resources/Images/Animations/Demonio/DefensaRota/", 6, this->_position, renderer);
-    this->_idle = new Animacion("../Resources/Images/Animations/Demonio/Idle/", 1, this->_position, renderer);
+    this->_caminar = new Animacion("Resources/Images/Animations/Demonio/Caminata/", 8, this->_position, renderer);
+    this->_bloquear = new Animacion("Resources/Images/Animations/Demonio/Bloqueo/", 8, this->_position, renderer);
+    this->_morir = new Animacion("Resources/Images/Animations/Demonio/Muerte/", 18, this->_position, renderer);
+    this->_golpear = new Animacion("Resources/Images/Animations/Demonio/Golpe/", 7, this->_position, renderer);
+    this->_defensa_rota = new Animacion("Resources/Images/Animations/Demonio/DefensaRota/", 6, this->_position, renderer);
+    this->_idle = new Animacion("Resources/Images/Animations/Demonio/Idle/", 1, this->_position, renderer);
     this->_anim_actual = this->_idle;
 }
 Demonio::Demonio(const Demonio& orig) {}

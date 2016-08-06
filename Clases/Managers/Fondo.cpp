@@ -12,7 +12,7 @@
  */
 
 #include "Fondo.h"
-#include <SDL_image.h>
+#include <SDL2/SDL_image.h>
 
 Fondo::Fondo() {
     this->_position = new SDL_Rect();

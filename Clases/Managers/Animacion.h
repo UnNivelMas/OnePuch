@@ -14,8 +14,8 @@
 #ifndef ANIMACION_H
 #define ANIMACION_H
 #include <SDL2/SDL.h>
-#include <SDL_image.h>
-#include <SDL_stdinc.h>
+#include <SDL2/SDL_image.h>
+#include <SDL2/SDL_stdinc.h>
 
 class Animacion {
     public:

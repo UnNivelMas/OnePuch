@@ -39,6 +39,7 @@ class Director {
         Escena* _actual;
         Gameplay* _gameplay;
         unsigned int _lastTime, _currentTime;
+        float _fps;
 };
 
 #endif /* DIRECTOR_H */

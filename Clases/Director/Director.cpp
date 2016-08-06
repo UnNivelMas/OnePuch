@@ -12,15 +12,17 @@
  */
 
 #include "Director.h"
+#include "../../File/FileManager.h"
 #include <stdio.h> 
 
 Director::Director() {
     SDL_Init(SDL_INIT_VIDEO);
+    _fps = 1000 / FileManager::getInstance()->getProperty("fps");
     this->_window = SDL_CreateWindow("One Punch Game", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280, 720, SDL_WINDOW_OPENGL);
     this->_renderer = SDL_CreateRenderer(this->_window,-1,SDL_RENDERER_ACCELERATED);
     this->_inputManager = new Input();
     this->_inputManager->setDirector(this);
-    SDL_LogSetPriority(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_INFO);
+    SDL_LogSetPriority(SDL_LOG_CATEGORY_APPLICATION|SDL_LOG_CATEGORY_SYSTEM, SDL_LOG_PRIORITY_ERROR);
 }
 Director::Director(const Director& orig) {}
 Director::~Director() {
@@ -48,7 +50,7 @@ void Director::start(){
         this->_actual->draw(this->_renderer);
         SDL_RenderPresent(this->_renderer);
         _lastTime = _currentTime;
-        while(!this->_quit && _currentTime < (_lastTime+16.5)){
+        while(!this->_quit && _currentTime < (_lastTime+_fps)){
             this->_inputManager->checkEvents();
             _currentTime = SDL_GetTicks();
         }
