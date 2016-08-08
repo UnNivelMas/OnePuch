@@ -14,6 +14,7 @@
 #include "Gameplay.h"
 #include "../Director/Director.h"
 
+
 Gameplay::Gameplay() {}
 Gameplay::Gameplay(Director* dir)  :  Escena( dir) {
     SDL_Rect* pos = new SDL_Rect();
@@ -33,14 +34,11 @@ Gameplay::Gameplay(Director* dir)  :  Escena( dir) {
     this->_frente->loadImage("Resources/Images/Backgrounds/Gameplay/frente.png", dir->getRenderer());
     this->_frente->setPosition(pos);
     
-    this->_demonio = new Demonio(dir->getRenderer());
-    this->_templario = new Templario(dir->getRenderer());
+    this->_demonio = new Demonio(this, dir->getRenderer());
+    this->_templario = new Templario(this, dir->getRenderer());
 }
 Gameplay::Gameplay(const Gameplay& orig) {}
 Gameplay::~Gameplay(){}
-void Gameplay::update(){
-    
-}
 void Gameplay::draw(SDL_Renderer* render){
     this->_fondo->draw(render);
     
@@ -49,6 +47,10 @@ void Gameplay::draw(SDL_Renderer* render){
     
     this->_medio->draw(render);
     this->_frente->draw(render);
+}
+void Gameplay::update(double ticks){
+    this->_demonio->update(ticks);
+    this->_templario->update(ticks);
 }
 void Gameplay::onKeyDown(SDL_Event* event){
 //    SDL_Log("Gameplay::onKeyDown");
@@ -159,4 +161,7 @@ void Gameplay::onMouseButtonDown(SDL_Event* event){
         break;
         default:break;
     }*/
+}
+int Gameplay::getProperty(const char* key){
+    return Escena::getProperty(key);
 }

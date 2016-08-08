@@ -17,6 +17,7 @@
 
 Director::Director() {
     SDL_Init(SDL_INIT_VIDEO);
+    IMG_Init(IMG_INIT_PNG);
     _fps = 1000 / FileManager::getInstance()->getProperty("fps");
     this->_window = SDL_CreateWindow("One Punch Game", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280, 720, SDL_WINDOW_OPENGL);
     this->_renderer = SDL_CreateRenderer(this->_window,-1,SDL_RENDERER_ACCELERATED);
@@ -47,8 +48,13 @@ void Director::start(){
     while(! this->_quit){
         // _actual tiene la Scene actual y se pinta con el metodo _actual->draw();
         SDL_RenderClear(this->_renderer);
+        
+        this->_actual->update(SDL_GetTicks() - _lastTime);
+        
         this->_actual->draw(this->_renderer);
+        
         SDL_RenderPresent(this->_renderer);
+        
         _lastTime = _currentTime;
         while(!this->_quit && _currentTime < (_lastTime+_fps)){
             this->_inputManager->checkEvents();
@@ -67,4 +73,8 @@ void Director::onKeyUp(SDL_Event event){
 }
 void Director::onMouseButtonDown(SDL_Event event){
     this->_actual->onMouseButtonDown(&event);
+}
+int Director::getProperty(const char* key){
+    SDL_Log(key);
+    return FileManager::getInstance()->getProperty(key);
 }

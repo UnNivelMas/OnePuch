@@ -30,6 +30,7 @@ class Director {
         void onMouseButtonDown(SDL_Event);
         SDL_Renderer* getRenderer();
         SDL_Surface* getSurfaceWindow();
+        int getProperty(const char*);
     private:
         void createGameplay();
         int _quit;

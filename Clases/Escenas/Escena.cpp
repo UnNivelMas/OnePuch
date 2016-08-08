@@ -12,7 +12,7 @@
  */
 
 #include "Escena.h"
-
+#include "../Director/Director.h"
 Escena::Escena() {}
 Escena::Escena(Director* dir){
     this->_dir = dir;
@@ -23,7 +23,10 @@ void Escena::setDirector(Director* dir){
     this->_dir = dir;
 }
 void Escena::draw(SDL_Renderer* renderer){}
-void Escena::update(){}
+void Escena::update(double ticks){}
 void Escena::onKeyDown(SDL_Event* event){}
 void Escena::onKeyUp(SDL_Event* event){}
 void Escena::onMouseButtonDown(SDL_Event* event){}
+int Escena::getProperty(const char* key){
+    return this->_dir->getProperty(key);
+}

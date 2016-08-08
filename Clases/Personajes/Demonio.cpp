@@ -13,7 +13,7 @@
 #include "Personaje.h"
 #include "Demonio.h"
 
-Demonio::Demonio(SDL_Renderer* renderer) {
+Demonio::Demonio(Escena* escena, SDL_Renderer* renderer) : Personaje(escena, "Demonio"){
     this->_position = new SDL_Rect();
     this->_position->x = 500;
     this->_position->y = 250;
@@ -26,9 +26,19 @@ Demonio::Demonio(SDL_Renderer* renderer) {
     this->_defensa_rota = new Animacion("Resources/Images/Animations/Demonio/DefensaRota/", 6, this->_position, renderer);
     this->_idle = new Animacion("Resources/Images/Animations/Demonio/Idle/", 1, this->_position, renderer);
     this->_anim_actual = this->_idle;
+/*    
+    this->_state_idle->setPersonaje(this);
+    this->_state_attack->setPersonaje(this);
+    this->_state_block->setPersonaje(this);
+    this->_state_parry->setPersonaje(this);*/
 }
-Demonio::Demonio(const Demonio& orig) {}
+Demonio::Demonio(const Demonio& orig) : Personaje(orig){}
 Demonio::~Demonio() {}
 void Demonio::draw(SDL_Renderer* renderer) {
     this->_anim_actual->draw(renderer);
+}
+int Demonio::getProperty(const char* key){
+    char* aux = "Templario";
+    strcat(aux, key);
+    return Personaje::getProperty(aux);
 }

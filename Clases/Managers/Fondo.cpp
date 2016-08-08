@@ -30,8 +30,9 @@ void Fondo::loadImage(char file[], SDL_Renderer* renderer/*, SDL_Surface* gScree
     this->_texture = IMG_LoadTexture(renderer, file);
     if( this->_texture == NULL ){
         SDL_Log( "error cargando imagen\n");
+        SDL_Log(IMG_GetError());
     }else{
-        SDL_Log( "imagen cargada: \n");
+//        SDL_Log( "imagen cargada: \n");
     }
 }
 void Fondo::draw(SDL_Renderer* render){

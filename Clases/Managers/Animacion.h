@@ -25,10 +25,16 @@ class Animacion {
         virtual ~Animacion();
         void draw(SDL_Renderer*);
         void resetCounter();
+        void update(double);
+        void setFPS(int);
+        void start();
+        void stop();
+        bool isRuning();
     private:
+        bool _pause;
         char* _path;
-        int _cant;
-        int _actual;
+        double _ticks, _fps;
+        int _cant, _actual;
         SDL_Texture** _texture;
         SDL_Rect* _position;
 };

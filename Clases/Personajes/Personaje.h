@@ -15,10 +15,12 @@
 #define PERSONAJE_H
 #include <SDL2/SDL.h>
 #include "../Managers/Animacion.h"
+#include "State.h"
 
+class Escena;
 class Personaje {
 public:
-    Personaje();
+    Personaje(Escena*, const char *);
     Personaje(const Personaje& orig);
     void atacar(Personaje*);
     void bloquear(Personaje*);
@@ -31,9 +33,16 @@ public:
     void animarMorir();
     void animarParry();
     void recibirEvento();
+    void update(double);
+    void stateToIdle();
+    void stateToAttack(Personaje*);
+    void stateToBlock(Personaje*);
+    void stateToParry(Personaje*);
+    int getProperty(const char*);
     virtual ~Personaje();
     virtual void draw(SDL_Renderer*);
 protected:
+    Escena* _escena;
     Animacion* _golpear;
     Animacion* _caminar;
     Animacion* _bloquear;
@@ -41,8 +50,14 @@ protected:
     Animacion* _defensa_rota;
     Animacion* _anim_actual;
     Animacion* _idle;
+    double _ticks = 0.0;
     SDL_Rect* _position;
-    char state;/*i=idle; a=atacando; b=bloqueando; p=parryando(?)*/
+    State* _state;
+    State* _state_idle;
+    State* _state_attack;
+    State* _state_block;
+    State* _state_parry;
+    char _nombre[30] = "";
 };
 
 #endif /* PERSONAJE_H */

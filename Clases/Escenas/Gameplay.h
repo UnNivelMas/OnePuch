@@ -18,22 +18,23 @@
 #include "../Personajes/Templario.h"
 class Director;
 class Gameplay : public Escena {
-public:
-    Gameplay();
-    Gameplay(Director*);
-    Gameplay(const Gameplay& orig);
-    void draw(SDL_Renderer*);
-    void update();
-    virtual ~Gameplay();
-    void onKeyDown(SDL_Event*);
-    void onKeyUp(SDL_Event*);
-    void onMouseButtonDown(SDL_Event*);
-private:
-    Fondo* _medio;
-    Fondo* _fondo;
-    Fondo* _frente;
-    Demonio* _demonio;
-    Templario* _templario;
+    public:
+        Gameplay();
+        Gameplay(Director*);
+        Gameplay(const Gameplay& orig);
+        void draw(SDL_Renderer*);
+        void update(double);
+        virtual ~Gameplay();
+        void onKeyDown(SDL_Event*);
+        void onKeyUp(SDL_Event*);
+        void onMouseButtonDown(SDL_Event*);
+        int getProperty(const char*);
+    private:
+        Fondo* _medio;
+        Fondo* _fondo;
+        Fondo* _frente;
+        Demonio* _demonio;
+        Templario* _templario;
 };
 
 #endif /* GAMEPLAY_H */

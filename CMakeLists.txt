@@ -24,6 +24,11 @@ Clases/Managers/AudioManager.cpp
 Clases/Managers/Input.cpp 
 Clases/Managers/Fondo.cpp 
 Clases/Personajes/Demonio.cpp 
+Clases/Personajes/State.cpp 
+Clases/Personajes/Attack.cpp 
+Clases/Personajes/Block.cpp 
+Clases/Personajes/Parry.cpp 
+Clases/Personajes/Idle.cpp 
 Clases/Personajes/Personaje.cpp 
 Clases/Personajes/Templario.cpp)
 target_link_libraries(OnePunchGame FileLibrary)
@@ -38,7 +43,7 @@ file(GLOB GAME_RESOURCES
   "${CMAKE_CURRENT_SOURCE_DIR}/Resources/*"
 )
 
-file(COPY ${GAME_RESOURCES} DESTINATION ${CMAKE_BINARY_DIR}/Resources)   
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/Resources/ DESTINATION ${CMAKE_BINARY_DIR}/Resources/)   
 
 file(GLOB GAME_RESOURCES
   "${CMAKE_CURRENT_SOURCE_DIR}/OnePunch.properties"

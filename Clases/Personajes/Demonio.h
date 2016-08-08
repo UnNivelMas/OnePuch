@@ -15,13 +15,14 @@
 #define DEMONIO_H
 #include <SDL2/SDL.h>
 #include "Personaje.h"
-
+class Escena;
 class Demonio  : public Personaje {
 public:
-    Demonio(SDL_Renderer*);
+    Demonio(Escena*, SDL_Renderer*);
     Demonio(const Demonio& orig);
     void draw(SDL_Renderer*);
     virtual ~Demonio();
+    int getProperty(const char* );
 private:
 
 };

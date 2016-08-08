@@ -25,10 +25,11 @@ class Escena {
         virtual ~Escena();
         void setDirector(Director*);
         virtual void draw(SDL_Renderer*);
-        virtual void update();
+        virtual void update(double);
         virtual void onKeyDown(SDL_Event*);
         virtual void onKeyUp(SDL_Event*);
         virtual void onMouseButtonDown(SDL_Event*);
+        int getProperty(const char*);
 protected:
     Director* _dir;
     AudioManager* _audio;

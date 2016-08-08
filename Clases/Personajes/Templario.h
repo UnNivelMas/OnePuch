@@ -14,10 +14,12 @@
 #ifndef TEMPLARIO_H
 #define TEMPLARIO_H
 #include "Personaje.h"
+class Escena;
 class Templario : public Personaje {
 public:
-    Templario(SDL_Renderer*);
+    Templario(Escena*, SDL_Renderer*);
     Templario(const Templario& orig);
+    int getProperty(const char*);
     void draw(SDL_Renderer*);
     virtual ~Templario();
 private:
