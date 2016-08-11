@@ -9,11 +9,12 @@ public:
     State(const State& orig);
     void setPersonaje(Personaje*);
     void setEnemy(Personaje*);
-    void update(double);
+    virtual bool update(double);
     void start();
     virtual bool atacar(Personaje*);
     virtual bool bloquear(Personaje*);
     virtual bool parry(Personaje*);
+    virtual void recibirAtaque(Personaje*);
     virtual ~State();
 protected:
     double _ticks = 0.0;

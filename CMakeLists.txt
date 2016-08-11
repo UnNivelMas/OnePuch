@@ -29,6 +29,7 @@ Clases/Personajes/Attack.cpp
 Clases/Personajes/Block.cpp 
 Clases/Personajes/Parry.cpp 
 Clases/Personajes/Idle.cpp 
+Clases/Personajes/Death.cpp 
 Clases/Personajes/Personaje.cpp 
 Clases/Personajes/Templario.cpp)
 target_link_libraries(OnePunchGame FileLibrary)

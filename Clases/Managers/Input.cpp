@@ -30,18 +30,18 @@ int Input::checkEvents(){
     while (SDL_PollEvent(&this->event)) {
         switch (event.type) {
             case SDL_KEYDOWN: 
-                SDL_Log("SDL_KEYDOWN\n");
+//                SDL_Log("SDL_KEYDOWN\n");
                 this->_dir->onKeyDown(event);
                 break;
             case SDL_KEYUP: 
-                SDL_Log("SDL_KEYUP\n");
+//                SDL_Log("SDL_KEYUP\n");
                 this->_dir->onKeyUp(event);
                 break;
             case SDL_MOUSEBUTTONDOWN: 
                 this->_dir->onMouseButtonDown(event);
                 break;
             case SDL_QUIT:
-                SDL_Log("SDL_KEYUP\n");
+//                SDL_Log("SDL_KEYUP\n");
                 this->_dir->onQuit();
             break;
             default:break;

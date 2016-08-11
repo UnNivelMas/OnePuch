@@ -6,11 +6,12 @@ class Parry : public State {
         Parry(Personaje*);
         Parry(const Parry& orig);
         void setPersonaje(Personaje*);
-        void update(double);
+        bool update(double);
         void start();
         bool atacar(Personaje*);
         bool bloquear(Personaje*);
         bool parry(Personaje*);
+        void recibirAtaque(Personaje*);
         virtual ~Parry();
     protected:
 

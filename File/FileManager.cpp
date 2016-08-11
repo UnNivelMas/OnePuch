@@ -33,8 +33,9 @@ int FileManager::getProperty(const char* key){
 	for(int i = 0; i < 100; i++){
 		if(propertiesMap[i].active == 0)
 			return 0;
-		if(!searchedKey.compare(propertiesMap[i].key))
+		if(!searchedKey.compare(propertiesMap[i].key)){
 			return propertiesMap[i].value;
+        }
 	}
 	return 0;
 }

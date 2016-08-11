@@ -38,6 +38,9 @@ public:
     void stateToAttack(Personaje*);
     void stateToBlock(Personaje*);
     void stateToParry(Personaje*);
+    void stateToDeath(Personaje*);
+    void setAnimLoop(bool);
+    char* getNombre();
     int getProperty(const char*);
     virtual ~Personaje();
     virtual void draw(SDL_Renderer*);
@@ -57,7 +60,8 @@ protected:
     State* _state_attack;
     State* _state_block;
     State* _state_parry;
-    char _nombre[30] = "";
+    State* _state_death;
+    char _nombre[30];
 };
 
 #endif /* PERSONAJE_H */

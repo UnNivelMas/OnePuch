@@ -11,14 +11,16 @@ Attack::Attack(Personaje* personaje) : State(personaje) {
 
 Attack::Attack(const Attack& orig) : State(orig) {}
 Attack::~Attack() {}
-void Attack::update(double ticks){
+bool Attack::update(double ticks){
     this->_ticks +=ticks;
     if(this->_ticks >= this->_time_durante && this->_done == false){
         this->_done = true;
+        SDL_Log("Atacando");
         this->_enemy->recibirAtaque(this->_personaje);
     }else if(this->_ticks >= this->_time_post){
         this->_personaje->stateToIdle();
     }
+    return true;
 }
 void Attack::start(){
     this->_ticks = 0;
@@ -26,6 +28,7 @@ void Attack::start(){
 bool Attack::atacar(Personaje* enemy){
     if(this->_ticks >= this->_time_post){
         this->_personaje->stateToAttack(enemy);
+        SDL_Log("Attack::atacar");
         return true;
     }
     return false;
@@ -33,6 +36,7 @@ bool Attack::atacar(Personaje* enemy){
 bool Attack::bloquear(Personaje* enemy){
     if(this->_ticks >= this->_time_post){
         this->_personaje->stateToBlock(enemy);
+        SDL_Log("Attack::bloquear");
         return true;
     }
     return false;
@@ -40,7 +44,11 @@ bool Attack::bloquear(Personaje* enemy){
 bool Attack::parry(Personaje* enemy){
     if(this->_ticks >= this->_time_post){
         this->_personaje->stateToParry(enemy);
+        SDL_Log("Attack::parry");
         return true;
     }
     return false;
+}
+void Attack::recibirAtaque(Personaje* enemy){
+    this->_personaje->stateToDeath(enemy);
 }

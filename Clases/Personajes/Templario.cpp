@@ -23,21 +23,11 @@ Templario::Templario(Escena* escena, SDL_Renderer* renderer) : Personaje(escena,
     this->_morir = new Animacion("Resources/Images/Animations/Templario/Muerte/", 6, this->_position, renderer);
     this->_golpear = new Animacion("Resources/Images/Animations/Templario/Golpe/", 24, this->_position, renderer);
     this->_defensa_rota = new Animacion("Resources/Images/Animations/Templario/DefensaRota/", 15, this->_position, renderer);
-    this->_idle = new Animacion("./Resources/Images/Animations/Templario/Idle/", 1, this->_position, renderer);
+    this->_idle = new Animacion("Resources/Images/Animations/Templario/Idle/", 1, this->_position, renderer);
     this->_anim_actual = this->_idle;
-    
-//    this->_state_idle->setPersonaje(this);
-//    this->_state_attack->setPersonaje(this);
-//    this->_state_block->setPersonaje(this);
-//    this->_state_parry->setPersonaje(this);
 }
-
-Templario::Templario(const Templario& orig) :Personaje(orig) {
-}
-
-Templario::~Templario() {
-}
-
+Templario::Templario(const Templario& orig) :Personaje(orig) {}
+Templario::~Templario() {}
 void Templario::draw(SDL_Renderer* renderer) {
     this->_anim_actual->draw(renderer);
 }

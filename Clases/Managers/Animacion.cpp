@@ -15,6 +15,7 @@
 
 Animacion::Animacion(char* path, int cant, SDL_Rect* position, SDL_Renderer* renderer) {
     int i;
+    this->_loop = true;
     this->_fps = 1000/12;
     this->_path = path;
     this->_cant = cant;
@@ -23,7 +24,6 @@ Animacion::Animacion(char* path, int cant, SDL_Rect* position, SDL_Renderer* ren
     this->_position = position;
     this->_texture = (SDL_Texture**)malloc(sizeof(SDL_Texture*)*cant);
     char str[5];
-    SDL_Log(str);
     for(i = 0; i < cant; i++){
         char result[100];
         strcpy(result, path);
@@ -41,12 +41,16 @@ Animacion::Animacion(char* path, int cant, SDL_Rect* position, SDL_Renderer* ren
         }
     }
 }
+void Animacion::setLoop(bool loop){
+    this->_loop = loop;
+}
 void Animacion::start() {
     this->_actual = 0;
     this->_pause = false;
 }
 void Animacion::stop() {
     this->_pause = true;
+    this->_actual = 0;
 }
 bool Animacion::isRuning() {
     return this->_pause;
@@ -69,8 +73,12 @@ void Animacion::update(double ticks){
             this->_ticks -= this->_fps;
             this->_actual++;
             if(this->_actual >= this->_cant){
-                this->_actual = 0;
                 this->_pause = true;
+                if(this->_loop){
+                    this->_actual = 0;
+                }else{
+                    this->_actual = this->_cant-1;
+                }
             }
         }
     }else{

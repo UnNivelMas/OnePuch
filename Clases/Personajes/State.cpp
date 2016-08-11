@@ -13,12 +13,12 @@ void State::setEnemy(Personaje* enemy){
     this->_enemy = enemy;
     this->start();
 }
-void State::update(double ticks){
+bool State::update(double ticks){
     this->_ticks +=ticks;
+    return true;
 }
 void State::start(){}
 bool State::atacar(Personaje* enemy){
-    SDL_Log("asdfasdf");
     return false;
 }
 bool State::bloquear(Personaje* enemy){
@@ -26,4 +26,7 @@ bool State::bloquear(Personaje* enemy){
 }
 bool State::parry(Personaje* enemy){
     return false;
+}
+void State::recibirAtaque(Personaje* enemy){
+    
 }

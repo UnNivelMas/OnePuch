@@ -29,9 +29,11 @@ class Animacion {
         void setFPS(int);
         void start();
         void stop();
+        void setLoop(bool);
         bool isRuning();
     private:
         bool _pause;
+        bool _loop;
         char* _path;
         double _ticks, _fps;
         int _cant, _actual;

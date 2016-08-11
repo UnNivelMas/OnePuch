@@ -6,11 +6,12 @@ class Block : public State {
         Block(Personaje*);
         Block(const Block& orig);
         void setPersonaje(Personaje*);
-        void update(double);
+        bool update(double);
         void start();
         bool atacar(Personaje*);
         bool bloquear(Personaje*);
         bool parry(Personaje*);
+        void recibirAtaque(Personaje*);
         virtual ~Block();
     protected:
 

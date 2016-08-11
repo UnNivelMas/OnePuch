@@ -1,10 +1,10 @@
-#ifndef IDLE_H
-#define IDLE_H
+#ifndef DEATH_H
+#define DEATH_H
 #include "State.h"
-class Idle : public State {
+class Death : public State {
     public:
-        Idle(Personaje*);
-        Idle(const Idle& orig);
+        Death(Personaje*);
+        Death(const Death& orig);
         void setPersonaje(Personaje*);
         bool update(double);
         void start();
@@ -12,7 +12,7 @@ class Idle : public State {
         bool bloquear(Personaje*);
         bool parry(Personaje*);
         void recibirAtaque(Personaje*);
-        virtual ~Idle();
+        virtual ~Death();
     protected:
 
 };

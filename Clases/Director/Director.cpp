@@ -75,6 +75,6 @@ void Director::onMouseButtonDown(SDL_Event event){
     this->_actual->onMouseButtonDown(&event);
 }
 int Director::getProperty(const char* key){
-    SDL_Log(key);
-    return FileManager::getInstance()->getProperty(key);
+    int r = FileManager::getInstance()->getProperty(key);
+    return r;
 }

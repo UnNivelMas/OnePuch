@@ -1,5 +1,6 @@
 #include "Block.h"
 #include "Personaje.h"
+#include <SDL2/SDL.h>
 
 Block::Block(Personaje* personaje) : State(personaje) {
     this->_personaje = personaje;
@@ -13,11 +14,13 @@ Block::~Block() {}
 void Block::setPersonaje(Personaje* personaje){
     this->_personaje = personaje;
 }
-void Block::update(double ticks){
+bool Block::update(double ticks){
     this->_ticks +=ticks;
+    return true;
 }
 void Block::start(){}
 bool Block::atacar(Personaje* enemy){
+    SDL_Log("Block::atacar");
      if(this->_ticks >= this->_time_post){
         this->_personaje->stateToAttack(enemy);
         return true;
@@ -25,6 +28,7 @@ bool Block::atacar(Personaje* enemy){
     return false;
 }
 bool Block::bloquear(Personaje* enemy){
+    SDL_Log("Block::bloquear");
      if(this->_ticks >= this->_time_post){
         this->_personaje->stateToBlock(enemy);
         return true;
@@ -32,9 +36,13 @@ bool Block::bloquear(Personaje* enemy){
     return false;
 }
 bool Block::parry(Personaje* enemy){
+    SDL_Log("Block::parry");
      if(this->_ticks >= this->_time_post){
         this->_personaje->stateToParry(enemy);
         return true;
     }
     return false;
+}
+void Block::recibirAtaque(Personaje* enemy){
+    //this->_personaje->stateToDeath(enemy);
 }
