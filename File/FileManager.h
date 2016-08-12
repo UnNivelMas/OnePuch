@@ -20,6 +20,7 @@ public:
     void openFile(const char* );
     void openPropertiesFile(const char* );
     int getProperty(const char*);
+    void reset();
 
 private:
 	FileManager();

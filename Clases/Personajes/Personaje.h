@@ -40,6 +40,7 @@ public:
     void stateToParry(Personaje*);
     void stateToDeath(Personaje*);
     void setAnimLoop(bool);
+    void reset();
     char* getNombre();
     int getProperty(const char*);
     virtual ~Personaje();

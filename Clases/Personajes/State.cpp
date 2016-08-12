@@ -27,6 +27,5 @@ bool State::bloquear(Personaje* enemy){
 bool State::parry(Personaje* enemy){
     return false;
 }
-void State::recibirAtaque(Personaje* enemy){
-    
-}
+void State::recibirAtaque(Personaje* enemy){}
+void State::reset(){}

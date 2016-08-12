@@ -12,6 +12,7 @@ class Death : public State {
         bool bloquear(Personaje*);
         bool parry(Personaje*);
         void recibirAtaque(Personaje*);
+        void reset();
         virtual ~Death();
     protected:
 

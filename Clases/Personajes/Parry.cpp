@@ -4,9 +4,7 @@
 
 Parry::Parry(Personaje* personaje) : State(personaje) {
     this->_personaje = personaje;
-    this->_time_pre = personaje->getProperty("ParryPre");
-    this->_time_durante = this->_time_pre + personaje->getProperty("ParryDurante");
-    this->_time_post = this->_time_durante + personaje->getProperty("ParryPost");
+    this->reset();
 }
 Parry::Parry(const Parry& orig) : State(orig){}
 Parry::~Parry() {}
@@ -20,25 +18,25 @@ bool Parry::update(double ticks){
 }
 void Parry::start(){}
 bool Parry::atacar(Personaje* enemy){
-    SDL_Log("Parry::atacar");
     if(this->_ticks >= this->_time_post){
         this->_personaje->stateToAttack(enemy);
+        this->_personaje->animarAtaque();
         return true;
     }
     return false;
 }
 bool Parry::bloquear(Personaje* enemy){
-    SDL_Log("Parry::bloquear");
     if(this->_ticks >= this->_time_post){
         this->_personaje->stateToBlock(enemy);
+        this->_personaje->animarBloqueo();
         return true;
     }
     return false;
 }
 bool Parry::parry(Personaje* enemy){
-    SDL_Log("Parry::parry");
     if(this->_ticks >= this->_time_post){
         this->_personaje->stateToParry(enemy);
+        this->_personaje->animarParry();
         return true;
     }
     return false;
@@ -49,4 +47,10 @@ void Parry::recibirAtaque(Personaje* enemy){
     }else{
         this->_personaje->stateToDeath(enemy);
     }
+}
+void Parry::reset(){
+    this->_ticks = 0;
+    this->_time_pre = this->_personaje->getProperty("ParryPre");
+    this->_time_durante = this->_time_pre + this->_personaje->getProperty("ParryDurante");
+    this->_time_post = this->_time_durante + this->_personaje->getProperty("ParryPost");
 }

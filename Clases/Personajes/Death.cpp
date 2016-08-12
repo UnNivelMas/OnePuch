@@ -4,9 +4,7 @@
 
 Death::Death(Personaje* personaje) : State(personaje) {
     this->_personaje = personaje;
-//    this->_time_pre = personaje->getProperty("ParryPre");
-//    this->_time_durante = this->_time_pre + personaje->getProperty("ParryDurante");
-//    this->_time_post = this->_time_durante + personaje->getProperty("ParryPost");
+    this->reset();
 }
 Death::Death(const Death& orig) : State(orig){}
 Death::~Death() {}
@@ -34,4 +32,7 @@ bool Death::parry(Personaje* enemy){
 }
 void Death::recibirAtaque(Personaje* enemy){
     
+}
+void Death::reset(){
+    this->_ticks = 0;
 }

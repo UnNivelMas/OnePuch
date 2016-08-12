@@ -13,6 +13,7 @@ class Parry : public State {
         bool parry(Personaje*);
         void recibirAtaque(Personaje*);
         virtual ~Parry();
+        void reset();
     protected:
 
 };

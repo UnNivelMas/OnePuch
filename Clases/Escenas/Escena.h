@@ -29,6 +29,7 @@ class Escena {
         virtual void onKeyDown(SDL_Event*);
         virtual void onKeyUp(SDL_Event*);
         virtual void onMouseButtonDown(SDL_Event*);
+        virtual void reset();
         int getProperty(const char*);
 protected:
     Director* _dir;

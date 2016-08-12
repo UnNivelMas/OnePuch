@@ -11,6 +11,7 @@ public:
     void setEnemy(Personaje*);
     virtual bool update(double);
     void start();
+    virtual void reset();
     virtual bool atacar(Personaje*);
     virtual bool bloquear(Personaje*);
     virtual bool parry(Personaje*);

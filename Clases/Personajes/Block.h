@@ -12,6 +12,7 @@ class Block : public State {
         bool bloquear(Personaje*);
         bool parry(Personaje*);
         void recibirAtaque(Personaje*);
+        void reset();
         virtual ~Block();
     protected:
 

@@ -10,24 +10,14 @@
 FileManager::FileManager(){
 	centinel = 0;
 }
-
-FileManager::~FileManager(){
-
-}
-
+FileManager::~FileManager(){}
 FileManager* FileManager::instance = 0;
-
-FileManager* FileManager::getInstance()
-{
+FileManager* FileManager::getInstance(){
 	if(!instance)
 		instance = new FileManager();
 	return instance;
 }
-
-void FileManager::openFile(const char* fileName){
-
-}
-
+void FileManager::openFile(const char* fileName){}
 int FileManager::getProperty(const char* key){
 	std::string searchedKey(key);
 	for(int i = 0; i < 100; i++){
@@ -39,7 +29,6 @@ int FileManager::getProperty(const char* key){
 	}
 	return 0;
 }
-    
 void FileManager::openPropertiesFile(const char* fileName){
 	std::ifstream infile(fileName);
 
@@ -58,4 +47,7 @@ void FileManager::openPropertiesFile(const char* fileName){
 		propertiesMap[centinel].active = 1;
 		centinel++;
 	}
+}
+void FileManager::reset(){
+    centinel = 0;
 }

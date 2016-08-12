@@ -21,22 +21,31 @@ Personaje::Personaje(Escena* escena, const char* nombre) {
     this->_state_death = dynamic_cast<Death*>(this->_state_death);
     this->_state = this->_state_idle;
 }
+void Personaje::reset(){
+    this->_state_idle->reset();
+    this->_state_attack->reset();
+    this->_state_block->reset();
+    this->_state_parry->reset();
+    this->_state_death->reset();
+    this->_state = this->_state_idle;
+    this->_idle->reset();
+    this->_anim_actual->reset();
+    this->_golpear->reset();
+    this->_defensa_rota->reset();
+    this->_morir->reset();
+    this->_bloquear->reset();
+    this->_caminar->reset();
+}
 Personaje::Personaje(const Personaje& orig){}Personaje::~Personaje(){}
 void Personaje::draw(SDL_Renderer* renderer){}
 void Personaje::atacar(Personaje* enemy){
-    if(this->_state->atacar(enemy)){
-        this->animarAtaque();
-    }
+    this->_state->atacar(enemy);
 }
 void Personaje::bloquear(Personaje* enemy){
-    if(this->_state->bloquear(enemy)){
-        this->animarBloqueo();
-    }
+    this->_state->bloquear(enemy);
 }
 void Personaje::parry(Personaje* enemy){
-    if(this->_state->parry(enemy)){
-        this->animarParry();
-    }
+    this->_state->parry(enemy);
 }
 char* Personaje::getNombre(){return &(this->_nombre[0]);}
 void Personaje::recibirEvento(){}

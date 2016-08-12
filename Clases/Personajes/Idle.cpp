@@ -3,6 +3,7 @@
 #include <SDL2/SDL.h>
 
 Idle::Idle(Personaje* personaje) : State(personaje) {
+    this->reset();
 }
 Idle::Idle(const Idle& orig) : State(orig) {}
 Idle::~Idle() {}
@@ -17,19 +18,22 @@ bool Idle::update(double ticks){
 void Idle::start(){}
 bool Idle::atacar(Personaje* enemy){
     this->_personaje->stateToAttack(enemy);
-    SDL_Log("Idle::atacar");
+    this->_personaje->animarAtaque();
     return true;
 }
 bool Idle::bloquear(Personaje* enemy){
     this->_personaje->stateToBlock(enemy);
-    SDL_Log("Idle::bloquear");
+    this->_personaje->animarBloqueo();
     return true;
 }
 bool Idle::parry(Personaje* enemy){
     this->_personaje->stateToParry(enemy);
-    SDL_Log("Idle::parry");
+    this->_personaje->animarParry();
     return true;
 }
 void Idle::recibirAtaque(Personaje* enemy){
     this->_personaje->stateToDeath(enemy);
+}
+void Idle::reset(){
+    this->_ticks = 0;
 }

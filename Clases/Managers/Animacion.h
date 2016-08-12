@@ -29,6 +29,7 @@ class Animacion {
         void setFPS(int);
         void start();
         void stop();
+        void reset();
         void setLoop(bool);
         bool isRuning();
     private:

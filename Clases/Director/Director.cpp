@@ -18,6 +18,7 @@
 Director::Director() {
     SDL_Init(SDL_INIT_VIDEO);
     IMG_Init(IMG_INIT_PNG);
+    FileManager::getInstance()->openPropertiesFile("OnePunch.properties");
     _fps = 1000 / FileManager::getInstance()->getProperty("fps");
     this->_window = SDL_CreateWindow("One Punch Game", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280, 720, SDL_WINDOW_OPENGL);
     this->_renderer = SDL_CreateRenderer(this->_window,-1,SDL_RENDERER_ACCELERATED);
@@ -66,7 +67,13 @@ SDL_Renderer* Director::getRenderer(){
     return this->_renderer;
 }
 void Director::onKeyDown(SDL_Event event){
-    this->_actual->onKeyDown(&event);
+    if(event.key.keysym.sym == SDLK_F5){
+        FileManager::getInstance()->reset();
+        FileManager::getInstance()->openPropertiesFile("OnePunch.properties");
+        this->_actual->reset();
+    }else{
+        this->_actual->onKeyDown(&event);
+    }
 }
 void Director::onKeyUp(SDL_Event event){
     this->_actual->onKeyUp(&event);

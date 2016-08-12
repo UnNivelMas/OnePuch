@@ -165,3 +165,9 @@ void Gameplay::onMouseButtonDown(SDL_Event* event){
 int Gameplay::getProperty(const char* key){
     return Escena::getProperty(key);
 }
+void Gameplay::reset(){
+    SDL_Log("Gameplay::reset -> init");
+    this->_demonio->reset();
+    this->_templario->reset();
+    SDL_Log("Gameplay::reset -> end");
+}

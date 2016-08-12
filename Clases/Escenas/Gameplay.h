@@ -28,6 +28,7 @@ class Gameplay : public Escena {
         void onKeyDown(SDL_Event*);
         void onKeyUp(SDL_Event*);
         void onMouseButtonDown(SDL_Event*);
+        void reset();
         int getProperty(const char*);
     private:
         Fondo* _medio;

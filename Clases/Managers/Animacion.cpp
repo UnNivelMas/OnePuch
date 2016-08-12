@@ -85,3 +85,9 @@ void Animacion::update(double ticks){
         this->_ticks = 0;
     }
 }
+void Animacion::reset(){
+    this->_ticks = 0;
+    this->_actual = 0;
+    this->_loop = true;
+    this->_pause = true;
+}

@@ -17,8 +17,6 @@
 #include "Clases/Director/Director.h"
 
 int main(int argc, char** argv) {
-	FileManager::getInstance()->openPropertiesFile("OnePunch.properties");
-
     Director* dir = new Director();
     dir->start();
     return 0;
