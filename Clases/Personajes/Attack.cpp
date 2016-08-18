@@ -52,6 +52,7 @@ void Attack::recibirAtaque(Personaje* enemy){
 }
 void Attack::reset(){
     this->_ticks = 0;
+    this->_done = false;
     this->_time_pre = this->_personaje->getProperty("AtaquePre");
     this->_time_durante = this->_time_pre + this->_personaje->getProperty("AtaqueDurante");
     this->_time_post = this->_time_durante + this->_personaje->getProperty("AtaquePost");

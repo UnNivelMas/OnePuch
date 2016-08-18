@@ -18,11 +18,10 @@ public:
     virtual void recibirAtaque(Personaje*);
     virtual ~State();
 protected:
-    double _ticks = 0.0;
+    double _ticks;
     double _time_pre;
     double _time_durante;
     double _time_post;
-    int _state = 0;/*0=idle;1=atack;2=block;3=parry*/
     Personaje* _personaje;
     Personaje* _enemy;
 };

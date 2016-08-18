@@ -8,6 +8,7 @@
 
 Personaje::Personaje(Escena* escena, const char* nombre) {
     strcpy(this->_nombre, nombre);
+    this-> _ticks = 0.0;
     this->_escena = escena;
     this->_state_idle = new Idle(this);
     this->_state_idle = dynamic_cast<Idle*>(this->_state_idle);

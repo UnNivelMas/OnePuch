@@ -54,7 +54,7 @@ protected:
     Animacion* _defensa_rota;
     Animacion* _anim_actual;
     Animacion* _idle;
-    double _ticks = 0.0;
+    double _ticks;
     SDL_Rect* _position;
     State* _state;
     State* _state_idle;

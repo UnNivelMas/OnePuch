@@ -15,6 +15,6 @@ class Attack : public State {
         void reset();
         virtual ~Attack();
     protected:
-        bool _done = false;
+        bool _done;
 };
 #endif

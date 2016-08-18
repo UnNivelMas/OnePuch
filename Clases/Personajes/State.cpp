@@ -3,6 +3,7 @@
 #include "Personaje.h"
 State::State(Personaje* personaje) {
     this->_personaje = personaje;
+    this->_ticks = 0.0;
 }
 State::State(const State& orig) {}
 State::~State() {}
