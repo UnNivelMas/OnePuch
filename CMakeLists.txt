@@ -1,8 +1,11 @@
 cmake_minimum_required(VERSION 3.3)
 
 project (OnePunchGame)
+
+
 set(CMAKE_BUILD_TYPE Release)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${OnePunchGame_SOURCE_DIR}")
+
 
 #find_package(SDL2 REQUIRED)
 #find_package(SDL2_image REQUIRED)

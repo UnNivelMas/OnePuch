@@ -12,6 +12,7 @@
  */
 
 #include "Animacion.h"
+#include <stdio.h>
 
 Animacion::Animacion(char* path, int cant, SDL_Rect* position, SDL_Renderer* renderer) {
     int i;
