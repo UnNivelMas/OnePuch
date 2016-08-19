@@ -14,6 +14,7 @@
 
 Demonio::Demonio(Escena* escena, SDL_Renderer* renderer) : Personaje(escena, "Demonio"){
     this->_position = new SDL_Rect();
+    this->_joystick = SDL_NumJoysticks() > 1 ? 1 : 0;
     this->_position->x = 500;
     this->_position->y = 250;
     this->_position->w = 480;

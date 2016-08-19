@@ -29,6 +29,9 @@ class Escena {
         virtual void onKeyDown(SDL_Event*);
         virtual void onKeyUp(SDL_Event*);
         virtual void onMouseButtonDown(SDL_Event*);
+        virtual void onJoyButtonDown(SDL_Event*);
+        virtual void onJoyAxysMove(SDL_Event*);
+        virtual void onJoyBallMove(SDL_Event*);
         virtual void reset();
         int getProperty(const char*);
 protected:

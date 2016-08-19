@@ -27,6 +27,9 @@ void Escena::update(double ticks){}
 void Escena::onKeyDown(SDL_Event* event){}
 void Escena::onKeyUp(SDL_Event* event){}
 void Escena::onMouseButtonDown(SDL_Event* event){}
+void Escena::onJoyButtonDown(SDL_Event* event){}
+void Escena::onJoyAxysMove(SDL_Event* event){}
+void Escena::onJoyBallMove(SDL_Event* event){}
 void Escena::reset(){}
 int Escena::getProperty(const char* key){
     return this->_dir->getProperty(key);

@@ -162,6 +162,18 @@ void Gameplay::onMouseButtonDown(SDL_Event* event){
         default:break;
     }*/
 }
+void Gameplay::onJoyButtonDown(SDL_Event* event){
+    this->_templario->onJoyButtonDown(event, this->_demonio);
+    this->_demonio->onJoyButtonDown(event, this->_templario);
+}
+void Gameplay::onJoyAxysMove(SDL_Event* event){
+    this->_templario->onJoyAxysMove(event, this->_demonio);
+    this->_demonio->onJoyAxysMove(event, this->_templario);
+}
+void Gameplay::onJoyBallMove(SDL_Event* event){
+    this->_templario->onJoyBallMove(event, this->_demonio);
+    this->_demonio->onJoyBallMove(event, this->_templario);
+}
 int Gameplay::getProperty(const char* key){
     return Escena::getProperty(key);
 }

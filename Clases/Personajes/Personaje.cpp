@@ -8,7 +8,8 @@
 
 Personaje::Personaje(Escena* escena, const char* nombre) {
     strcpy(this->_nombre, nombre);
-    this-> _ticks = 0.0;
+    this->_joystick = -1;
+    this->_ticks = 0.0;
     this->_escena = escena;
     this->_state_idle = new Idle(this);
     this->_state_idle = dynamic_cast<Idle*>(this->_state_idle);
@@ -121,4 +122,30 @@ void Personaje::stateToDeath(Personaje* enemy){
 }
 void Personaje::setAnimLoop(bool loop){
     this->_anim_actual->setLoop(loop);
+}
+void Personaje::onJoyButtonDown(SDL_Event* event, Personaje* enemy){
+    if(this->_joystick == event->jbutton.which){
+//        SDL_Log("Personaje::onJoyButtonDown::%d", event->jbutton.button);
+        switch(event->jbutton.button){
+            case 4://Defensa
+                this->bloquear(enemy);
+                break;
+            case 1://Parry
+                this->parry(enemy);
+                break;
+            case 2://Ataque
+                this->atacar(enemy);
+                break;
+        }
+    }
+}
+void Personaje::onJoyAxysMove(SDL_Event* event, Personaje* enemy){
+    if(this->_joystick == event->jbutton.which){
+        
+    }
+}
+void Personaje::onJoyBallMove(SDL_Event* event, Personaje* enemy){
+    if(this->_joystick == event->jbutton.which){
+        
+    }
 }

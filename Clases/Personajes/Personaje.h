@@ -40,6 +40,9 @@ public:
     void stateToParry(Personaje*);
     void stateToDeath(Personaje*);
     void setAnimLoop(bool);
+    void onJoyButtonDown(SDL_Event*, Personaje*);
+    void onJoyAxysMove(SDL_Event*, Personaje*);
+    void onJoyBallMove(SDL_Event*, Personaje*);
     void reset();
     char* getNombre();
     int getProperty(const char*);
@@ -63,6 +66,7 @@ protected:
     State* _state_parry;
     State* _state_death;
     char _nombre[30];
+    int _joystick;
 };
 
 #endif /* PERSONAJE_H */

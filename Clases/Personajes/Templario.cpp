@@ -14,6 +14,7 @@
 
 Templario::Templario(Escena* escena, SDL_Renderer* renderer) : Personaje(escena, "Templario"){
     this->_position = new SDL_Rect();
+    this->_joystick = SDL_NumJoysticks() > 1 ? 0 : -1;
     this->_position->x = 175;
     this->_position->y = 250;
     this->_position->w = 480;

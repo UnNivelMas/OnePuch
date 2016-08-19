@@ -28,6 +28,9 @@ class Director {
         void onKeyDown(SDL_Event);
         void onKeyUp(SDL_Event);
         void onMouseButtonDown(SDL_Event);
+        void onJoyButtonDown(SDL_Event);
+        void onJoyAxysMove(SDL_Event);
+        void onJoyBallMove(SDL_Event);
         SDL_Renderer* getRenderer();
         SDL_Surface* getSurfaceWindow();
         int getProperty(const char*);

@@ -16,7 +16,13 @@
 #include <stdio.h> 
 
 Director::Director() {
-    SDL_Init(SDL_INIT_VIDEO);
+    //SDL_Init(SDL_INIT_VIDEO);
+    //SDL_Init( SDL_INIT_VIDEO | SDL_INIT_JOYSTICK );
+    if (SDL_Init( SDL_INIT_VIDEO | SDL_INIT_JOYSTICK ) < 0){
+        fprintf(stderr, "Couldn't initialize SDL: %s\n", SDL_GetError());
+        exit(1);
+    }
+
     IMG_Init(IMG_INIT_PNG);
     FileManager::getInstance()->openPropertiesFile("OnePunch.properties");
     _fps = 1000 / FileManager::getInstance()->getProperty("fps");
@@ -84,4 +90,13 @@ void Director::onMouseButtonDown(SDL_Event event){
 int Director::getProperty(const char* key){
     int r = FileManager::getInstance()->getProperty(key);
     return r;
+}
+void Director::onJoyButtonDown(SDL_Event event){
+    this->_actual->onJoyButtonDown(&event);
+}
+void Director::onJoyAxysMove(SDL_Event event){
+    this->_actual->onJoyAxysMove(&event);
+}
+void Director::onJoyBallMove(SDL_Event event){
+    this->_actual->onJoyBallMove(&event);
 }
