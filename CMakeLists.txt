@@ -18,6 +18,8 @@ link_directories(${SDL2_LIB}/ ${SDL2_IMAGE_LIBRARIES}/)
 add_executable (OnePunchGame main.cpp 
 Clases/Director/Director.cpp 
 Clases/Escenas/Escena.cpp 
+Clases/Escenas/Home.cpp 
+Clases/UI/Boton.cpp 
 Clases/Escenas/Gameplay.cpp 
 Clases/Managers/Animacion.cpp 
 Clases/Managers/AudioManager.cpp 
