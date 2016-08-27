@@ -32,7 +32,8 @@ void Templario::draw(SDL_Renderer* renderer) {
     this->_anim_actual->draw(renderer);
 }
 int Templario::getProperty(const char* key){
-    char* aux = "Templario";
+    char* aux;
+    strcat(aux, "Templario");
     strcat(aux, key);
     return Personaje::getProperty(aux);
 }

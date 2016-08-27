@@ -1,11 +1,8 @@
 #include "Input.h"
 #include "../Director/Director.h"
-#include "../../Command/Command.h"
 
 Input::Input(){
     this->_pause = false;   
-    _tickEvents = new Command[50];
-    _tickEventsOffset = _tickEvents;
 }
 Input::Input(const Input& orig) {}
 Input::~Input() {}

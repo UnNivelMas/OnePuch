@@ -32,7 +32,8 @@ void Demonio::draw(SDL_Renderer* renderer) {
     this->_anim_actual->draw(renderer);
 }
 int Demonio::getProperty(const char* key){
-    char* aux = "Templario";
+    char* aux;
+    strcat(aux, "Demonio");
     strcat(aux, key);
     return Personaje::getProperty(aux);
 }

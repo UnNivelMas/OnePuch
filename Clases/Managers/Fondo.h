@@ -22,7 +22,7 @@ class Fondo {
         Fondo(const Fondo& orig);
         void setPosition(SDL_Rect*);
         virtual ~Fondo();
-        void loadImage(char*, SDL_Renderer*);
+        void loadImage(const char*, SDL_Renderer*);
         //void loadImage(char*, SDL_Renderer*, SDL_Surface*);
         void draw(SDL_Renderer*);
     private:

@@ -26,7 +26,7 @@ Fondo::~Fondo() {}
 void Fondo::setPosition(SDL_Rect* position){
     this->_position = position;
 }
-void Fondo::loadImage(char file[], SDL_Renderer* renderer/*, SDL_Surface* gScreenSurface*/){
+void Fondo::loadImage(const char file[], SDL_Renderer* renderer/*, SDL_Surface* gScreenSurface*/){
     this->_texture = IMG_LoadTexture(renderer, file);
     if( this->_texture == NULL ){
         SDL_Log( "error cargando imagen\n");

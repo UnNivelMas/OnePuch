@@ -20,7 +20,7 @@
 class Animacion {
     public:
         Animacion();
-        Animacion(char*, int, SDL_Rect*, SDL_Renderer*);
+        Animacion(const char*, int, SDL_Rect*, SDL_Renderer*);
         Animacion(const Animacion& orig);
         virtual ~Animacion();
         void draw(SDL_Renderer*);
@@ -35,7 +35,7 @@ class Animacion {
     private:
         bool _pause;
         bool _loop;
-        char* _path;
+        const char* _path;
         double _ticks, _fps;
         int _cant, _actual;
         SDL_Texture** _texture;

@@ -14,7 +14,7 @@
 #include "Animacion.h"
 #include <stdio.h>
 
-Animacion::Animacion(char* path, int cant, SDL_Rect* position, SDL_Renderer* renderer) {
+Animacion::Animacion(const char* path, int cant, SDL_Rect* position, SDL_Renderer* renderer) {
     int i;
     this->_loop = true;
     this->_fps = 1000/12;
